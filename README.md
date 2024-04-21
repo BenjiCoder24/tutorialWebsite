@@ -1,48 +1,62 @@
-# Hello website!
+# Java Tutorial Website
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+This project encompasses the creation of a vibrant and interactive educational website aimed at teaching Java programming to students in the Philippines. It is designed to be engaging for a younger audience, featuring a playful design and dynamic user interactions.
 
-_Last updated: 28 Feb 2023_
+## Project Overview
 
-## What's in this project?
+The website serves as a platform to host detailed programming tutorials, session plans, and valuable resources. It's structured to provide a comprehensive learning experience, facilitating easy access to educational materials and hands-on programming activities.
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+## Features
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+- **Home Page**: Introduces the website and its purpose, providing navigation to other sections.
+- **Session Overview**: Lists all available tutorial sessions, each linking to a detailed session plan.
+- **Detailed Session Plans**: Offers step-by-step guides for each tutorial, including objectives, expected outcomes, and necessary materials.
+- **Resources Page**: Links directly to GitHub repositories and external resources beneficial for the students.
+- **About Page**: Details about the project, its mission, and the educators behind it.
+- **Pictures Page**: A gallery featuring screenshots and related images to visually enhance the learning materials.
+- **Playful and Dynamic Design**: Utilizes a color scheme and font style that are appealing to teenagers and kids, with CSS animations to make the website lively and interactive.
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+## Technologies Used
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add using the code in the TODO.
+- **HTML**: Structures the web pages and their content.
+- **CSS**: Styles the website with a playful theme and animations for a dynamic user experience.
+- **JavaScript**: Enhances interactivity, handling dynamic content loading and responsive animations.
 
-Open each file and check out the comments (in gray) for more info.
+## Setup and Deployment
 
-## Try this next 🏗️
+- Developed and hosted on Glitch, allowing for real-time updates and immediate feedback on changes.
+- Custom domain configured to provide a professional and accessible web presence.
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+## Getting Started
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+To get a local copy up and running, follow these simple steps:
 
-## Ready to share your site?
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/java-tutorial-website.git
 
-Add these meta tags for SEO and social sharing between your page `<head></head>` tags, changing the values for your site:
+2. Open the project in a web browser or deploy it using a local server or an online platform like Glitch.
 
-```
-<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-<meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Hello World!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-<meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
-<meta name="twitter:card" content="summary" />
-```
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+## Contributions
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-## You built this with Glitch!
+## Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+Distributed under the Apache License 2.0. See LICENSE for more information.
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+## Contact
+Benjamin Mager - Benjamin.m.mager@google.com
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+Project Link: https://github.com/BenjiCoder24/tutorialWebsite.git
+
+
+### Notes:
+
+- **Adjust the URL** in the README to match your actual GitHub repository URL.
+- **Update contact information** with your actual contact details.
+- This README effectively communicates the project's purpose, setup, and how others can contribute, making it a useful document for both users and potential contributors. If there are any more details you'd like to add or adjust, feel free to let me know!
