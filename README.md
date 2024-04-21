@@ -50,7 +50,7 @@ License
 Distributed under the Apache License 2.0. See LICENSE for more information.
 
 ## Contact
-Benjamin Mager - Benjamin.m.mager@google.com
+Benjamin Mager - Benjamin.m.Mager@gmail.com
 
 Project Link: https://github.com/BenjiCoder24/tutorialWebsite.git
 
