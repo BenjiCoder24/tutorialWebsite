@@ -6,31 +6,43 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-    padding: 20px;
 }
 
 header {
-    background: #ff6347; /* Tomato Red */
+    background: #2c3e50; /* Dark Blue */
     color: #ffffff;
     padding: 10px 20px;
     text-align: center;
     border-radius: 12px;
-    animation: slideInFromLeft 0.5s ease-out forwards; /* Slide-in animation */
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
-    animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+    margin-right: 20px;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 nav a {
@@ -45,16 +57,25 @@ main {
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    animation: slideInFromRight 1s ease-out forwards; /* Slide-in animation */
+    animation: slideInFromRight 1s ease-out forwards;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    background: #4b0082; /* Indigo */
+.hero {
+    background: url('path/to/your/image.jpg') no-repeat center center/cover; /* Background image */
     color: white;
-    border-radius: 12px;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content {
+    margin-top: 20px;
 }
 
 h1, h2, h3 {
@@ -67,6 +88,29 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6347; /* Tomato Red */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #e5533d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #2c3e50; /* Dark Blue */
+    color: white;
+    border-radius: 12px;
 }
 
 /* Keyframes for animations */
@@ -104,12 +148,15 @@ a:hover {
 /* Responsive styling */
 @media (max-width: 600px) {
     nav ul {
+        flex-direction: column;
         text-align: center;
-        padding-top: 10px;
     }
 
     nav ul li {
-        display: block;
         margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
     }
 }
