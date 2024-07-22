@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>JavaScript Zoom Lesson: Ball Bounce Game</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo">
+            <!-- Add your logo here -->
+            <h1>JavaScript Zoom Lesson: Ball Bounce Game</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sessions.html">Sessions Overview</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>JavaScript Zoom Lesson: Ball Bounce Game</h2>
+
+            <h3>Open P5.js Editor</h3>
+            <p><a href="https://editor.p5js.org" target="_blank">Open P5.js Editor</a></p>
+
+            <h3>Summary of Last Lesson</h3>
+            <p>In our previous lesson, we covered the basics of JavaScript and p5.js, including how to set up your environment, draw shapes, and handle user input. We created a simple program that draws a circle following the mouse cursor.</p>
+
+            <h3>Lesson Objectives</h3>
+            <p>Today, we will enhance our program by introducing movement, control, and collision detection. We'll focus on:</p>
+            <ol>
+                <li>Using variables to control the ball's movement.</li>
+                <li>Implementing conditional statements (<code>if</code> statements) for collision detection.</li>
+                <li>Adding a movable bar controlled by keyboard inputs.</li>
+                <li>Making the ball bounce off the sides of the canvas and the movable bar.</li>
+            </ol>
+
+            <h3>Starting Code</h3>
+            <pre><code>var xpos;
+var ypos;
+
+function setup() {
+  createCanvas(500, 400);
+  xpos = 200;
+  ypos = 200;
+}
+
+function draw() {
+  background(220);
+  drawCircle(mouseX, mouseY, 50);
+}
+
+function drawCircle(x, y, size) {
+  fill('blue');
+  noStroke();
+  ellipse(x, y, size, size);
+}</code></pre>
+
+            <h3>Section 1: Introducing Velocity Variables</h3>
+            <p>First, we will modify our code to make the ball move on its own.</p>
+            <h4>Changes:</h4>
+            <ul>
+                <li>Add <code>horizontalSpeed</code> and <code>verticalSpeed</code> variables.</li>
+                <li>Use these variables to change the position of the ball.</li>
+            </ul>
+            <h4>Updated Code:</h4>
+            <pre><code>var xpos, ypos;
+var horizontalSpeed, verticalSpeed;
+
+function setup() {
+  createCanvas(500, 400);
+  xpos = 200;
+  ypos = 200;
+  horizontalSpeed = 3;
+  verticalSpeed = 3;
+}
+
+function draw() {
+  background(220);
+  xpos += horizontalSpeed;
+  ypos += verticalSpeed;
+  drawCircle(xpos, ypos, 50);
+}
+
+function drawCircle(x, y, size) {
+  fill('blue');
+  noStroke();
+  ellipse(x, y, size, size);
+}</code></pre>
+
+            <h3>Section 2: Implementing Collision Detection</h3>
+            <p>Now, let's make the ball bounce off the canvas edges.</p>
+            <h4>Changes:</h4>
+            <ul>
+                <li>Use <code>if</code> statements to reverse the direction of the ball when it hits the edges.</li>
+            </ul>
+            <h4>Updated Code:</h4>
+            <pre><code>var xpos, ypos;
+var horizontalSpeed, verticalSpeed;
+
+function setup() {
+  createCanvas(500, 400);
+  xpos = 200;
+  ypos = 200;
+  horizontalSpeed = 3;
+  verticalSpeed = 3;
+}
+
+function draw() {
+  background(220);
+  xpos += horizontalSpeed;
+  ypos += verticalSpeed;
+
+  if (xpos > width - 25 || xpos < 25) {
+    horizontalSpeed *= -1;
+  }
+
+  if (ypos > height - 25 || ypos < 25) {
+    verticalSpeed *= -1;
+  }
+
+  drawCircle(xpos, ypos, 50);
+}
+
+function drawCircle(x, y, size) {
+  fill('blue');
+  noStroke();
+  ellipse(x, y, size, size);
+}</code></pre>
+
+            <h3>Section 3: Adding a Movable Bar</h3>
+            <p>We'll add a vertical bar that can be moved up and down using the arrow keys.</p>
+            <h4>Changes:</h4>
+            <ul>
+                <li>Declare variables for the bar's position and size.</li>
+                <li>Update the bar's position based on key presses.</li>
+            </ul>
+            <h4>Updated Code:</h4>
+            <pre><code>var xpos, ypos;
+var horizontalSpeed, verticalSpeed;
+var barY;
+
+function setup() {
+  createCanvas(400, 400);
+  xpos = 200;
+  ypos = 200;
+  horizontalSpeed = 3;
+  verticalSpeed = 3;
+  barY = height / 2;
+}
+
+function draw() {
+  background(220);
+  xpos += horizontalSpeed;
+  ypos += verticalSpeed;
+
+  if (xpos > width - 25 || xpos < 25) {
+    horizontalSpeed *= -1;
+  }
+
+  if (ypos > height - 25 || ypos < 25) {
+    verticalSpeed *= -1;
+  }
+
+  if (xpos > 330 && ypos > barY && ypos < barY + 100) {
+    horizontalSpeed *= -1;
+  }
+
+  drawCircle(xpos, ypos, 50);
+  drawBar();
+}
+
+function drawCircle(x, y, size) {
+  fill('blue');
+  noStroke();
+  ellipse(x, y, size, size);
+}
+
+function drawBar() {
+  rect(350, barY, 20, 100);
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    barY -= 10;
+  } else if (keyCode === DOWN_ARROW) {
+    barY += 10;
+  }
+}</code></pre>
+
+            <h3>Section 4: Ball and Bar Collision</h3>
+            <p>Finally, let's make the ball bounce off the movable bar.</p>
+            <h4>Changes:</h4>
+            <ul>
+                <li>Add collision detection between the ball and the bar.</li>
+            </ul>
+            <h4>Updated Code:</h4>
+            <pre><code>function draw() {
+  // ... (previous draw code)
+
+  if (xpos > 330 && ypos > barY && ypos < barY + 100) {
+    horizontalSpeed *= -1;
+  }
+}</code></pre>
+
+            <h3>Conclusion</h3>
+            <p>In this lesson, we've enhanced our JavaScript program to create an interactive game with moving elements and collision detection. Practice modifying the code to change the game's behavior and design. Happy coding!</p>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
