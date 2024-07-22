@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Introduction to JavaScript</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo">
+            <!-- Add your logo here -->
+            <h1>Introduction to JavaScript</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sessions.html">Sessions Overview</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Introduction to JavaScript</h2>
+            <h3>Before we get started</h3>
+            <h4>Open the P5js editor</h4>
+            <p>Open p5js editor: <a href="https://editor.p5js.org/" target="_blank">https://editor.p5js.org/</a></p>
+            <p>Log in with your Google account:</p>
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/login_image.png?v=1721610526470" alt="login picture" width="130" />
+            <p>Then select Google login:</p>
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/google_login_image.png?v=1721610529942" alt="login picture" width="130" />
+
+            <h3>Handout 1: Introduction to JavaScript</h3>
+            <h4>What is JavaScript?</h4>
+            <p>JavaScript is a high-level, dynamic programming language primarily used for creating interactive features on websites. It's an essential part of the web development trio: HTML (structure), CSS (style), and JavaScript (behavior). Unlike HTML and CSS, which are markup and style sheet languages respectively, JavaScript is a true programming language that enables you to implement complex features on web pages.</p>
+            <ul>
+                <li><strong>Client-Side Operations:</strong> JavaScript runs in the user's web browser and can be used to control webpage behavior, validate forms, create cookies, and more.</li>
+                <li><strong>Server-Side Development:</strong> With environments like Node.js, JavaScript can also be used for backend development.</li>
+            </ul>
+            <h4>Why Learn JavaScript?</h4>
+            <ul>
+                <li>It's one of the most popular programming languages globally.</li>
+                <li>Essential for web development and has a wide range of applications, from web apps to game development.</li>
+            </ul>
+
+            <h3>Handout 2: Basic JavaScript Program with p5.js</h3>
+            <h4>Variables in JavaScript</h4>
+            <p>Variables are like containers for storing data values. JavaScript has three ways to declare variables, which are <code>let</code>, <code>const</code>, and <code>var</code>.</p>
+            <ul>
+                <li><code>let</code> allows you to declare variables whose values can change and are limited to the block in which they are defined.</li>
+                <li><code>const</code> is used for variables whose values are not meant to change (constant).</li>
+                <li><code>var</code> is the oldest keyword for defining a variable, but its use is now generally replaced by <code>let</code> and <code>const</code> due to its less predictable function-scoped behavior.</li>
+            </ul>
+
+            <h4>Functions in JavaScript with p5.js</h4>
+            <p>Functions are blocks of code designed to perform a particular task and are executed when "called" or "invoked". In p5.js, you often use predefined functions such as <code>setup()</code> and <code>draw()</code>, but you can also define your own.</p>
+            <pre><code>function drawCircle(x, y, size) {
+  ellipse(x, y, size, size);
+}</code></pre>
+            <p>In this example, <code>x</code>, <code>y</code>, and <code>size</code> are parameters of the <code>drawCircle</code> function, which draws a circle at position <code>(x, y)</code> with the specified size.</p>
+
+            <h4>Function Calls and Input Parameters</h4>
+            <p>To use a function, you call it with specific values, known as arguments.</p>
+            <pre><code>drawCircle(100, 200, 50);</code></pre>
+            <p>Here we call <code>drawCircle</code> with arguments <code>100</code>, <code>200</code>, and <code>50</code>. When <code>drawCircle</code> executes, it uses these values to draw an ellipse.</p>
+
+            <h4>Creating Interactive Web Elements with p5.js</h4>
+            <p>p5.js provides a full set of drawing functionality and handles the interaction with the HTML/CSS for you. Instead of manually handling canvas and events, p5.js offers functions like <code>mouseX</code> and <code>mouseY</code> to track the mouse position.</p>
+            <pre><code>function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  drawCircle(mouseX, mouseY, 50);
+}
+
+function drawCircle(x, y, size) {
+  fill('blue');
+  noStroke();
+  ellipse(x, y, size, size);
+}</code></pre>
+            <p>In this simple p5.js sketch, <code>drawCircle</code> is defined to take <code>x</code>, <code>y</code>, and <code>size</code> as input parameters and uses them to draw a circle. The <code>draw</code> function is called repeatedly by p5.js and uses the <code>mouseX</code> and <code>mouseY</code> variables provided by p5.js to draw a circle that follows the mouse cursor.</p>
+
+            <h4>Arrays in JavaScript with p5.js</h4>
+            <p>Arrays are used to store multiple values in a single variable. This is useful for storing a list of elements, like multiple circle positions.</p>
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/array_image.png?v=1721610535087" alt="Array Example" />
+            <p>In p5.js, you can use arrays to manage multiple objects and draw them in the <code>draw</code> function.</p>
+            <pre><code>let phrases = [];
+
+function setup() {
+  createCanvas(400, 400);
+  // Initialize the array with four text values
+  phrases[0] = "Hello, World!";
+  phrases[1] = "Welcome to p5.js!";
+  phrases[2] = "Coding is fun!";
+  phrases[3] = "Enjoy creating!";
+  
+  // Set text characteristics
+  textSize(16);
+  textAlign(CENTER, CENTER);
+}
+
+function draw() {
+  background(220);
+  
+  // Display each text value at a different position
+  text(phrases[0], width / 2, 100); // Display the first phrase
+  text(phrases[1], width / 2, 150); // Display the second phrase
+  text(phrases[2], width / 2, 200); // Display the third phrase
+  text(phrases[3], width / 2, 250); // Display the fourth phrase
+}</code></pre>
+
+            <h4>For-Loops in JavaScript</h4>
+            <p>In JavaScript, a <code>for</code> loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The <code>for</code> loop is commonly used to iterate over data structures like arrays.</p>
+            <h5>Syntax of a for Loop</h5>
+            <pre><code>for (initialization; condition; final-expression) {
+  // code to be executed for each iteration
+}</code></pre>
+            <p><strong>Initialization</strong> - Here, you typically define and set your loop counter to a starting value.<br>
+            <strong>Condition</strong> - This expression is checked before the execution of every iteration. If it evaluates to <code>true</code>, the loop continues; if it evaluates to <code>false</code>, the loop stops.<br>
+            <strong>Final-expression</strong> - After each iteration, this expression is executed, usually incrementing or decrementing the loop counter.</p>
+
+            <h5>Example: Displaying Text from an Array with a for Loop</h5>
+            <pre><code>let phrases = [];
+
+function setup() {
+  createCanvas(400, 400);
+  // Initialize the array with four text values
+  phrases[0] = "Hello, World!";
+  phrases[1] = "Welcome to p5.js!";
+  phrases[2] = "Coding is fun!";
+  phrases[3] = "Enjoy creating!";
+
+  createCanvas(400, 400);
+  textSize(16);
+  textAlign(CENTER, CENTER);
+}
+
+function draw() {
+  background(220);
+  // Use a for loop to display each phrase
+  for (let i = 0; i < phrases.length; i++) {
+    text(phrases[i], width / 2, 100 + i * 50);
+  }
+}</code></pre>
+
+            <p>In this example:
+                <ul>
+                    <li>We have an array named <code>phrases</code> that contains four text strings.</li>
+                    <li>In the <code>draw</code> function, we use a <code>for</code> loop to iterate over the array.</li>
+                    <li>For each iteration, the loop uses the <code>text()</code> function to display the current string on the canvas.</li>
+                    <li>The <code>i</code> variable acts as the index for the array and as part of the calculation for the <code>y</code> position to space out each string vertically.</li>
+                </ul>
+            </p>
+
+            <h4>Conclusion</h4>
+            <p>The <code>for</code> loop is a powerful tool in JavaScript for iterating through arrays and other iterable objects. By understanding and using <code>for</code> loops, you can perform repeated operations efficiently in your code.</p>
+
+            <h3>Let's get started</h3>
+            <h4>Open the P5js editor</h4>
+            <p>Open p5js editor: <a href="https://editor.p5js.org/" target="_blank">https://editor.p5js.org/</a></p>
+            <p>Log in with your Google account:</p>
+            <img src="./pictures/login_image.png" alt="login picture" />
+            <img src="./pictures/google_login_image.png" alt="google login" />
+
+            <h4>Sample Program:</h4>
+            <pre><code>function setup() {
+  createCanvas(400, 400);
+  
+  // Inialize variable 
+  // xPos = 100
+}
+
+function draw() {
+  background(220);
+  
+  // xPos = mouseX
+  
+  ellipse(100, 100, 55, 55);
+}</code></pre>
+
+            <h4>Full Code</h4>
+            <pre><code>var xPos;
+var yPos;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  // Initialize variable 
+  xPos = 100;
+  yPos = 100;
+}
+
+function draw() {
+  background(220);
+  
+  xPos = mouseX;
+  yPos = mouseY;
+  
+  ellipse(xPos, yPos, 55, 55);
+}</code></pre>
+            <p>Detailed code explanation that demonstrates creating a canvas and drawing a circle that follows the mouse cursor.</p>
+
+            <h3>Handout 3: Introduction to Object-Oriented Programming (OOP)</h3>
+            <h4>What is OOP?</h4>
+            <p>A programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes), and code, in the form of procedures (often known as methods).</p>
+            <h5>Key Concepts in OOP:</h5>
+            <ul>
+                <li><strong>Class:</strong> Template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).</li>
+                <li><strong>Object:</strong> Instance of a class. An object in JavaScript is a standalone entity, with properties and type.</li>
+                <li><strong>Encapsulation:</strong> Encapsulation is the bundling of data and the methods that operate on that data under a single unit or class. It restricts direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the methods and data.</li>
+            </ul>
+
+            <h3>Handout 4: Refactoring into a Class</h3>
+            <h4>From Functions to Classes:</h4>
+            <p>Transitioning from a simple function-based approach to a class-based approach involves encapsulating functionality within a class.</p>
+            <h5>Creating a Class in JavaScript:</h5>
+            <pre><code>class Circle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = 50; // Set the size of the circle
+  }
+
+  // The draw function to display the circle
+  draw() {
+    fill('blue');
+    noStroke();
+    ellipse(this.x, this.y, this.size * 2, this.size * 2); // p5.js uses diameter for the ellipse size
+  }
+}
+
+let canvas = document.getElementById('myCanvas');
+let circle = new Circle(canvas);</code></pre>
+            <p>Detailed explanation of the Circle class example, breaking down the constructor and methods like <code>updateMousePosition</code> and <code>draw</code>.</p>
+
+            <h4>Using the Class in p5.js Code</h4>
+            <pre><code>// Define the Circle class in p5.js
+class Circle {
+  constructor(x, y) { // constructor is called when the object is created with 'new Circle(..)
+    this.x = x;
+    this.y = y;
+    this.size = 50; // Set the size of the circle
+  }
+
+  // The draw function to display the circle
+  draw() {
+    fill('blue');
+    noStroke();
+    ellipse(this.x, this.y, this.size * 2, this.size * 2); // p5.js uses diameter for the ellipse size
+  }
+}
+
+// Create a global circle object
+let circle;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  // Initialize the circle object with some starting coordinates
+  circle = new Circle(width / 2, height / 2);
+}
+
+function draw() {
+  background(255);
+
+  // Update the circle's position to the mouse coordinates
+  circle.x = mouseX;
+  circle.y = mouseY;
+
+  // Draw the circle
+  circle.draw();
+}</code></pre>
+
+            <h4>Advantages of Using Classes:</h4>
+            <ul>
+                <li><strong>Organizes code:</strong> easier to read, maintain, and debug.</li>
+                <li><strong>Reusability:</strong> once a class is written, it can be used to create numerous objects.</li>
+            </ul>
+
+            <h4>Conclusion and Further Resources</h4>
+            <p><strong>Recap and Encouragement:</strong> JavaScript is a versatile language with wide-ranging applications. Encourage students to experiment with code and build their own small projects.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
