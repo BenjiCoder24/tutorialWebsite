@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Introduction to OOP in Python</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo" />
+            <!-- Add your logo here -->
+            <h1>Introduction to Object-Oriented Programming (OOP) in Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sessions.html">Sessions Overview</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Introduction to Object-Oriented Programming (OOP) in Python</h2>
+            <p>In this tutorial, we'll explore the basics of Object-Oriented Programming (OOP) using Python. OOP is a programming paradigm that uses "objects" to represent data and methods that operate on that data.</p>
+
+            <h3>Simple Example: A Basic Class</h3>
+            <p>Let's start with a simple class that represents a <code>Dog</code>. This class will have attributes like <code>name</code> and <code>age</code>, and a method to display the dog's details.</p>
+            <pre><code># Define a simple class
+class Dog:
+    # Constructor
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    # Method to display dog details
+    def display(self):
+        print(f"Dog: {self.name}, Age: {self.age}")
+        
+# Creating an object of the class
+dog1 = Dog("Buddy", 4)
+dog1.display()
+</code></pre>
+
+            <h3>Understanding Classes</h3>
+            <p>A class is a blueprint for creating objects. It defines a set of attributes that will characterize any object that is instantiated from the class. Attributes are defined in the class body, and they can be data attributes (variables) or methods (functions).</p>
+            <pre><code># Define a more detailed class
+class ShoppingItem:
+    # Constructor
+    def __init__(self, name, quantity):
+        self.name = name
+        self.quantity = quantity
+    
+    # Method to display item details
+    def display(self):
+        print(f"Item: {self.name}, Quantity: {self.quantity}")
+        
+# Creating an object of the class
+item1 = ShoppingItem("Apple", 3)
+item1.display()
+</code></pre>
+
+            <h3>Methods in Classes</h3>
+            <p>Methods are functions defined inside a class that describe the behaviors of the objects. In our <code>ShoppingItem</code> class, we have defined a method <code>display</code> to print the details of the shopping item.</p>
+            <pre><code># Create more objects
+item2 = ShoppingItem("Banana", 5)
+item3 = ShoppingItem("Orange", 2)
+
+# Display the details of each item
+item2.display()
+item3.display()
+</code></pre>
+
+            <h3>Creating an Array of Objects</h3>
+            <p>Now, let's create a list (array) of <code>ShoppingItem</code> objects. We will prompt the user to input different items and their quantities. The user can type "finished" when they are done adding items.</p>
+            <pre><code># Initialize an empty list to hold shopping items
+shopping_list = []
+
+while True:
+    name = input("Enter item name (or 'finished' to end): ")
+    if name.lower() == 'finished':
+        break
+    quantity = int(input("Enter quantity: "))
+    item = ShoppingItem(name, quantity)
+    shopping_list.append(item)
+
+# Display all items in the shopping list
+for item in shopping_list:
+    item.display()
+</code></pre>
+
+            <h3>Inheritance in OOP</h3>
+            <p>Inheritance allows a class to inherit attributes and methods from another class. This helps in reusing code and building a hierarchy of classes. Let's create a <code>PerishableItem</code> class that inherits from <code>ShoppingItem</code> and adds an expiry date.</p>
+            <pre><code># Define a class that inherits from ShoppingItem
+class PerishableItem(ShoppingItem):
+    def __init__(self, name, quantity, expiry_date):
+        super().__init__(name, quantity)  # Call the constructor of the parent class
+        self.expiry_date = expiry_date
+    
+    # Method to display item details with expiry date
+    def display(self):
+        print(f"Item: {self.name}, Quantity: {self.quantity}, Expiry Date: {self.expiry_date}")
+
+# Creating an object of the derived class
+item4 = PerishableItem("Milk", 2, "2024-07-01")
+item4.display()
+</code></pre>
+
+            <h3>Benefits of OOP</h3>
+            <p>1. <strong>Encapsulation:</strong> OOP allows bundling of data and methods that operate on that data within a single unit called a class.<br>
+               2. <strong>Inheritance:</strong> It enables new classes to inherit features from existing classes, promoting code reuse.<br>
+               3. <strong>Polymorphism:</strong> OOP allows methods to do different things based on the object it is acting upon, making the code more flexible and reusable.<br>
+               4. <strong>Abstraction:</strong> OOP enables hiding complex implementation details and showing only the essential features of the object, simplifying code management.
+            </p>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://colab.research.google.com/github/BenjiCoder24/objectOrientProgramming/blob/main/oop_python.ipynb" target="_blank">Google Colab Notebook</a></li>
+                <li><a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank">GitHub Repository</a></li>
+            </ul>
+
+            <h3>Summary</h3>
+            <p>In this tutorial, we've covered the basics of Object-Oriented Programming (OOP) in Python. We learned about classes, methods, creating objects, inheritance, and the benefits of OOP. By understanding these concepts, you can write more organized, reusable, and scalable code.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>

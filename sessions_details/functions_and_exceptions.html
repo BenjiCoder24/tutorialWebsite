@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Python Functions and Exception Handling Tutorial</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <!-- Add your logo here -->
+
+        <h1>Python Functions and Exception Handling Tutorial</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sessions.html">Sessions Overview</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article>
+        <h2>How to Open the Coding Environment</h2>
+        <p>
+          Open:
+          <a
+            href="https://colab.research.google.com/drive/1RYQp-m3nOEZCMEF4VeKfzwaTHSQ3Lbme?usp=sharing"
+            target="_blank"
+            >Click here to open Google Colab</a
+          >
+        </p>
+
+        <h2>Introduction to Python Functions</h2>
+        <p>
+          Functions are the building blocks of readable, maintainable, and
+          reusable code. They allow you to execute a block of code multiple
+          times without repeating yourself.
+        </p>
+        <pre><code>def greet(name):
+    print(f"Hello, {name}!")
+greet('Alice')</code></pre>
+
+        <h2>Understanding Function Return Values</h2>
+        <p>Functions can return values that can be used later in the code.</p>
+        <pre><code>def add(a, b):
+    return a + b
+result = add(3, 4)
+print(result)</code></pre>
+
+        <h2>Scope and Lifetime of Variables</h2>
+        <p>
+          Variables created inside a function are local to that function, unless
+          declared global.
+        </p>
+        <pre><code>def function_scope():
+    local_var = 5
+    print(local_var)  # prints 5
+
+local_var = 10
+function_scope()  # This will print 5
+print(local_var)  # This will print 10</code></pre>
+
+        <h2>Advanced Function Concepts</h2>
+        <p>
+          You can set default values for parameters and use keyword arguments to
+          make your functions more flexible.
+        </p>
+        <pre><code>def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+greet('Bob')
+greet('Bob', greeting='Good morning')</code></pre>
+
+        <h2>Lambda Functions</h2>
+        <p>
+          Lambda functions are small anonymous functions that can have any
+          number of arguments but only one expression.
+        </p>
+        <pre><code>square = lambda x: x ** 2
+print(square(5))</code></pre>
+
+        <h2>Decorators and Higher-Order Functions</h2>
+        <p>
+          Decorators are a way to modify the behavior of a function without
+          permanently modifying it.
+        </p>
+        <pre><code>def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()</code></pre>
+
+        <h2>Introduction to Exception Handling</h2>
+        <p>
+          Exception handling in Python is done through the use of try and except
+          blocks.
+        </p>
+        <pre><code>try:
+    # code that may cause an exception
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("That's not a valid number!")</code></pre>
+
+        <h2>Working with the Exception Hierarchy</h2>
+        <p>
+          Python has many built-in exceptions that you can use to handle
+          different error cases.
+        </p>
+        <pre><code>try:
+    # code that may cause an exception
+    number = int(input("Enter a number: "))
+except ValueError as e:
+    print(f"An error occurred: {e}")</code></pre>
+
+        <h2>Ensuring Resource Management with `with` Statements</h2>
+        <p>
+          The with statement allows you to ensure that resources are properly
+          managed.
+        </p>
+        <pre><code>with open('file.txt', 'w') as file:
+    file.write('Hello, world!')</code></pre>
+
+        <h2>Practical Example: Creating a Robust Function</h2>
+        <p>
+          Let's build a function that takes user input and handles errors
+          appropriately.
+        </p>
+        <pre><code>def get_number():
+    while True:
+        try:
+            return int(input("Enter a number: "))
+        except ValueError:
+            print("That's not a valid number! Please try again.")
+
+number = get_number()
+print(f"You entered: {number}")</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>
+          In this tutorial, we've covered how to define and use functions,
+          handle exceptions, and manage resources in Python. These concepts are
+          essential for writing clean, efficient, and robust Python code.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>OOP Moving Objects Tutorial</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <!-- Add your logo here -->
+        <h1>OOP Moving Objects Tutorial</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sessions.html">Sessions Overview</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article>
+        <h2>Project Overview</h2>
+        <p>
+          This project demonstrates Object-Oriented Programming (OOP) concepts
+          in JavaScript by creating multiple moving objects on the screen. Each
+          object is initialized via a different class constructor call.
+        </p>
+
+        <h3>Project Structure</h3>
+        <ul>
+          <li>
+            <code>index.html</code>: The main HTML file that sets up the canvas
+            and includes the script.
+          </li>
+          <li>
+            <code>script.js</code>: The JavaScript file containing the OOP
+            classes and animation logic.
+          </li>
+          <li>
+            <code>style.css</code>: The CSS file for styling the page and
+            canvas.
+          </li>
+          <li>
+            <code>README.md</code>: This file, providing an overview and
+            detailed explanation of the project.
+          </li>
+        </ul>
+
+        <h3>How to Open the Coding Environment</h3>
+        <ul>
+          <li>
+            <a
+              href="https://glitch.com/edit/#!/javascriptoop-tutorial"
+              target="_blank"
+              >Working Code on Glitch</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/BenjiCoder24/javaScriptOop.git"
+              target="_blank"
+              >GitHub Repository</a
+            >
+          </li>
+        </ul>
+
+        <h3>Running the Project</h3>
+        <ol>
+          <li>Open the <code>index.html</code> file in your browser.</li>
+          <li>
+            The canvas will display moving objects, each with a different color,
+            demonstrating the use of OOP in JavaScript.
+          </li>
+        </ol>
+
+        <h3>Explanation of the Code</h3>
+
+        <h4>index.html</h4>
+        <p>
+          This is the main HTML file that sets up the canvas and includes the
+          script.
+        </p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;OOP Moving Objects Tutorial&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;canvas id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt;
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h4>script.js</h4>
+        <p>
+          This JavaScript file contains the OOP classes and the animation logic.
+        </p>
+
+        <h5>Base Class: MovingObject</h5>
+        <pre><code>class MovingObject {
+    constructor(x, y, speed) {
+        this.x = x;
+        this.y = y;
+        this.speed = speed;
+        this.color = 'red';
+    }
+
+    update() {
+        this.x += this.speed;
+        this.y += this.speed;
+
+        if (this.x &gt; canvas.width || this.y &gt; canvas.height) {
+            this.x = 0;
+            this.y = 0;
+        }
+    }
+
+    draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 20, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+</code></pre>
+
+        <p>
+          <strong>Constructor:</strong> The constructor method initializes the
+          object with position (x, y), speed, and color.
+        </p>
+        <p>
+          <strong>Update Method:</strong> The update method changes the position
+          of the object based on its speed. If the object moves outside the
+          canvas, it resets the position to the starting point.
+        </p>
+        <p>
+          <strong>Draw Method:</strong> The draw method draws the object on the
+          canvas as a colored circle.
+        </p>
+
+        <h5>Derived Classes: TypeOne, TypeTwo, TypeThree</h5>
+        <pre><code>class TypeOne extends MovingObject {
+    constructor(x, y, speed) {
+        super(x, y, speed);
+        this.color = 'blue';
+    }
+}
+
+class TypeTwo extends MovingObject {
+    constructor(x, y, speed) {
+        super(x, y, speed);
+        this.color = 'green';
+    }
+}
+
+class TypeThree extends MovingObject {
+    constructor(x, y, speed) {
+        super(x, y, speed);
+        this.color = 'yellow';
+    }
+}
+</code></pre>
+        <p>
+          Each derived class extends <code>MovingObject</code> and sets a
+          different color for the objects. They use the
+          <code>super</code> function to call the constructor of the base class.
+        </p>
+
+        <h5>Creating an Array of Objects</h5>
+        <pre><code>const objects = [
+    new TypeOne(50, 50, 2),
+    new TypeTwo(100, 100, 3),
+    new TypeThree(150, 150, 4)
+];
+</code></pre>
+        <p>
+          An array of objects is created, each initialized using a different
+          constructor. This array will be used to manage and animate multiple
+          objects on the canvas.
+        </p>
+
+        <h5>Animation Loop</h5>
+        <pre><code>const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    objects.forEach(obj =&gt; {
+        obj.update();
+        obj.draw();
+    });
+    requestAnimationFrame(animate);
+}
+
+animate();
+</code></pre>
+        <p>
+          <strong>Canvas Setup:</strong> The canvas is selected using
+          <code>document.getElementById</code> and its context is set to 2d. The
+          canvas dimensions are set to the size of the browser window.
+        </p>
+        <p>
+          <strong>Animation Loop:</strong> The <code>animate</code> function
+          clears the canvas, updates the position of each object, and draws each
+          object on the canvas. <code>requestAnimationFrame</code> is used to
+          call the <code>animate</code> function repeatedly, creating an
+          animation.
+        </p>
+
+        <h4>style.css</h4>
+        <p>This CSS file styles the page and the canvas.</p>
+        <pre><code>body {
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    background-color: #000;
+    display: block;
+}
+</code></pre>
+        <p>
+          <strong>body:</strong> Removes the margin and hides the overflow to
+          ensure the canvas takes up the full screen.
+        </p>
+        <p>
+          <strong>canvas:</strong> Sets the background color of the canvas to
+          black and ensures it is displayed as a block element.
+        </p>
+
+        <h3>Summary</h3>
+        <p>
+          This tutorial demonstrates how to use Object-Oriented Programming in
+          JavaScript to create and animate multiple objects on a canvas. By
+          defining a base class and extending it with derived classes, we can
+          create objects with different properties and behaviors, and manage
+          them efficiently in an animation loop.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

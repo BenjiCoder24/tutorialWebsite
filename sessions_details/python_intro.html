@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Python Tutorial for Beginners</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo">
+            <!-- Add your logo here -->
+            <h1>Python Tutorial for Beginners</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sessions.html">Sessions Overview</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Python Tutorial for Beginners</h2>
+            <p>This tutorial will guide you through the basics of Python, focusing on functions, variables, and for loops.</p>
+
+            <h3>Variables</h3>
+            <p>Variables are used to store information that can be referenced and manipulated in a program.</p>
+            <pre><code># Creating a variable
+greeting = 'Hello, world!'
+print(greeting)
+            </code></pre>
+
+            <h3>Functions</h3>
+            <p>Functions are reusable pieces of code that perform a specific task.</p>
+            <pre><code># Defining a function
+def greet(name):
+    print(f'Hello, {name}!')
+
+greet('Alice')
+            </code></pre>
+
+            <h3>For Loops</h3>
+            <p>For loops are used for iterating over a sequence (such as a list, tuple, dictionary, or string).</p>
+            <pre><code># Using a for loop
+colors = ['red', 'green', 'blue']
+for color in colors:
+    print(color)
+            </code></pre>
+
+            <h3>Fully Working Example</h3>
+            <p>Now, let's combine what we've learned into a fully working example.</p>
+            <pre><code># A simple program that greets each person in a list by their favorite color
+def greet_by_favorite_color(name, color):
+    print(f'Hello, {name}! Your favorite color is {color}.')
+
+names_and_colors = [('Alice', 'blue'), ('Bob', 'green'), ('Charlie', 'red')]
+for name, color in names_and_colors:
+    greet_by_favorite_color(name, color)
+            </code></pre>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Chat Bot Project Setup Guide</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo">
+            <!-- Add your logo here -->
+            <h1>Chat Bot Project Setup Guide</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sessions.html">Sessions Overview</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Chat Bot Project Setup Guide</h2>
+            <p>This guide provides step-by-step instructions for setting up the chat bot project on Glitch.</p>
+
+            <h3>Introduction to Web Servers and REST APIs</h3>
+            <h4>What is a Web Server?</h4>
+            <ul>
+                <li>A web server is a software that handles requests from clients (browsers or apps) and provides responses.</li>
+                <li>Responses include web pages, images, or data (like JSON) for web services.</li>
+            </ul>
+
+            <h4>What Does a Web Server Do?</h4>
+            <ul>
+                <li>Listens for incoming requests on a specific address and port.</li>
+                <li>Processes the request (e.g., fetch data, compute, etc.).</li>
+                <li>Sends a structured response back to the client.</li>
+            </ul>
+
+            <h4>How Web Servers Work</h4>
+            <ul>
+                <li>Clients (browsers/apps) send requests using URLs.</li>
+                <li>The web server routes these requests to appropriate endpoints/handlers.</li>
+                <li>Each endpoint runs code to process the client's request and provide a response.</li>
+            </ul>
+
+            <h4>REST API Overview</h4>
+            <ul>
+                <li><strong>REST API Definition:</strong>
+                    <ul>
+                        <li>REST stands for Representational State Transfer.</li>
+                        <li>A REST API allows clients to interact with a web server using standardized HTTP methods (GET, POST, PUT, DELETE).</li>
+                    </ul>
+                </li>
+                <li><strong>Endpoints:</strong> Each URL pattern represents an endpoint that handles specific data.</li>
+                <li><strong>HTTP Methods:</strong>
+                    <ul>
+                        <li><strong>GET:</strong> Retrieve data from the server.</li>
+                        <li><strong>POST:</strong> Send new data to the server.</li>
+                        <li><strong>PUT:</strong> Update existing data.</li>
+                        <li><strong>DELETE:</strong> Remove data.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Example Project on Glitch</h3>
+            <p>Let's move our chat bot server code to Glitch:</p>
+
+            <h4>Setting up on Glitch</h4>
+            <ol>
+                <li><strong>Create a New Project:</strong>
+                    <ul>
+                        <li>Go to <a href="https://glitch.com" target="_blank">Glitch</a>.</li>
+                        <li>Click on "New Project" and choose a template. For this guide, use "hello-webpage" (or any basic starter project).</li>
+                    </ul>
+                </li>
+                <li><strong>Cloning or Importing Code:</strong>
+                    <ul>
+                        <li><strong>Import from GitHub:</strong> If your project is in a GitHub repository, use "Import from GitHub" to clone it directly.</li>
+                        <li><strong>Manually Upload Files:</strong> Alternatively, copy and paste the provided <code>server.py</code>, <code>requirements.txt</code>, and <code>simple_frontend.html</code> into your Glitch project files.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>Configuring the Environment</h4>
+            <p>Add any required environment variables (like API keys) via the "Secrets" section in Glitch.</p>
+
+            <h4>Running the Project</h4>
+            <ol>
+                <li><strong>Setting up Dependencies:</strong>
+                    <ul>
+                        <li>Ensure the <code>requirements.txt</code> file lists all necessary Python packages.</li>
+                        <li>Click "Terminal" or "Console" to manually install dependencies: <code>pip install -r requirements.txt</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Starting the Server:</strong> Run the server using the command: <code>python server.py</code>.</li>
+                <li><strong>Accessing the Frontend:</strong> Create or upload your <code>simple_frontend.html</code> file. Click "Show" to access the frontend in a new tab.</li>
+            </ol>
+
+            <h4>Testing the Server</h4>
+            <ul>
+                <li><strong>/ping Endpoint:</strong> Test this endpoint to confirm the server is running: <code>https://YOUR-PROJECT.glitch.me/ping</code>.</li>
+                <li><strong>/chat Endpoint:</strong> Send chat messages via the <code>/chat</code> endpoint using the provided HTML interface or tools like Postman.</li>
+                <li><strong>Using <code>curl</code>:</strong>
+                    <pre><code>curl -X POST https://substantial-juicy-bull.glitch.me/chat \
+-H "Content-Type: application/json" \
+-d '{"message": "Hello! How are you?"}'
+                    </code></pre>
+                </li>
+            </ul>
+
+            <h3>Practice Time</h3>
+            <p>Encourage the students to:</p>
+            <ul>
+                <li>Test the <code>/ping</code> endpoint using their browser to understand server-client interaction.</li>
+                <li>Modify the chat bot frontend to style messages or change its layout.</li>
+                <li>Send different queries to the chat bot via the Glitch-hosted server.</li>
+            </ul>
+
+            <h3>Summary</h3>
+            <ul>
+                <li>Web servers handle incoming requests and provide responses.</li>
+                <li>REST APIs make it possible for web servers and clients to interact.</li>
+                <li>Glitch is a simple platform to deploy and experiment with web applications.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://colab.research.google.com/github/BenjiCoder24/objectOrientProgramming/blob/main/oop_python.ipynb" target="_blank">Google Colab Notebook</a></li>
+                <li><a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank">GitHub Repository</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
