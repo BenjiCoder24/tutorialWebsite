@@ -1,58 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Image Gallery</title>
-    <style>
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 20px;
-            justify-content: center;
-            background-color: #f9f9f9;
-        }
-        .gallery img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-content">
-            <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062" alt="Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sessions.html">Sessions Overview</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="pictures.html"class="active">Pictures</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header-content">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sessions.html">Sessions Overview</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            
+            <li><a href="pictures.html" class="active">Pictures</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="gallery">
-        <h1>Image Gallery</h1>
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.37.54%E2%80%AFPM.png?v=1713660232855" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.38.21%E2%80%AFPM.png?v=1713660232464" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.37.02%E2%80%AFPM.png?v=1713660233240" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.36.56%E2%80%AFPM.png?v=1713660233613" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.36.42%E2%80%AFPM.png?v=1713660234055" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.35.37%E2%80%AFPM.png?v=1713660235053" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.34.55%E2%80%AFPM.png?v=1713660235326" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.38.43%E2%80%AFPM.png?v=1713660232061" alt="Image Description">
-        <img src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.39.03%E2%80%AFPM.png?v=1713660231647" alt="Image Description">
+      <h1>Image Gallery</h1>
+      <div class="image-section">
+        <h2>Introduction to HTML</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intro_to_html_2.jpg?v=1722195731891"
+          alt="Introduction to HTML"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Introduction to JavaScript in HTML</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intor_to_js_in_html.jpg?v=1722195731891"
+          alt="Introduction to JS in HTML"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Introduction to JavaScript</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intor_to_js.jpg?v=1722195731891"
+          alt="Introduction to JavaScript"
+        />
+      </div>
+      <div class="image-section">
+        <h2>JavaScript Bouncing Ball</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/javascript_bouncing_ball.jpg?v=1722195731891"
+          alt="JavaScript Bouncing Ball"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Introduction to Python</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intro_python.jpg?v=1722195731891"
+          alt="Python intro"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Python Functions and Exception Handling</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/python_functions_exception.jpg?v=1722195731891"
+          alt="Python Functions and Exception Handling"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Python Control Structures</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/python_control_structures.jpg?v=1722195731891"
+          alt="Python Control Structures"
+        />
+      </div>
+
+      <div class="image-section">
+        <h2>Introduction to Object Orient programming</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intor_to_oop.jpg?v=1722195731891"
+          alt="Introduction to OOP"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Moving Objects with Object Oriented programming</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/oop_moving_objects.jpg?v=1722195731891"
+          alt="OOP Moving Objects"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Introduction to Webserver and REST API</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/intor_to_webserver_rest_api.jpg?v=1722195731891"
+          alt="Introduction to Webserver and REST API"
+        />
+      </div>
+      <div class="image-section">
+        <h2>Chat Bot with Flask</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/chat_bot_with_flask.jpg?v=1722195731891"
+          alt="Chat Bot with Flask"
+        />
+      </div>
+      <div class="image-section">
+        <h2>CodeWithBen.ai Website</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/code_with_benji_website.jpg?v=1722195731891"
+          alt="Code With Benji Website"
+        />
+      </div>
+
+      <!-- Existing images with "Live Session!!" header -->
+      <div class="image-section">
+        <h2>Live Session!!</h2>
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.37.54%E2%80%AFPM.png?v=1713660232855"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.38.21%E2%80%AFPM.png?v=1713660232464"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.37.02%E2%80%AFPM.png?v=1713660233240"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.36.56%E2%80%AFPM.png?v=1713660233613"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.36.42%E2%80%AFPM.png?v=1713660234055"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.35.37%E2%80%AFPM.png?v=1713660235053"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.34.55%E2%80%AFPM.png?v=1713660235326"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.38.43%E2%80%AFPM.png?v=1713660232061"
+          alt="Image Description"
+        />
+      </div>
+      <div class="image-section">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/Screenshot%202024-04-20%20at%208.39.03%E2%80%AFPM.png?v=1713660231647"
+          alt="Image Description"
+        />
+      </div>
     </main>
-</body>
+  </body>
 </html>

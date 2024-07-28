@@ -30,8 +30,9 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 150px;
     margin-right: 20px;
+    border-radius: 50%; /* Add rounded corners to the logo */
 }
 
 nav ul {
@@ -68,48 +69,25 @@ main {
     animation: slideInFromRight 1s ease-out forwards;
 }
 
-.hero {
-    background: url('path/to/your/image.jpg') no-repeat center center/cover; /* Background image */
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+.image-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #3498db; /* Light Blue */
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-}
-
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.content {
-    margin-top: 20px;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-a {
-    color: #ff6347; /* Tomato Red */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ff6347; /* Tomato Red */
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background: #e5533d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
 footer {
@@ -166,5 +144,65 @@ footer {
 
     .hero {
         padding: 50px 20px;
+    }
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Light Blue */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.hero {
+    background: url('path/to/your/image.jpg') no-repeat center center/cover; /* Background image */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6347; /* Tomato Red */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #e5533d;
+}
+
+/* Additional media query for desktop view */
+@media (min-width: 601px) {
+    .gallery img {
+        max-width: 60%;
     }
 }
