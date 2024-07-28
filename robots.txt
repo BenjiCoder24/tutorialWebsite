@@ -1,0 +1,13 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+# Disallow specific folders or files
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /.env
+
+# Allow specific folders or files
+User-agent: *
+Allow: /public/
