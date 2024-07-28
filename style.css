@@ -196,3 +196,10 @@ tr:nth-child(even) {
 .btn:hover {
     background: #e5533d;
 }
+
+/* Additional media query for desktop view */
+@media (min-width: 601px) {
+    .gallery img {
+        max-width: 60%;
+    }
+}
