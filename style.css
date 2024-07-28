@@ -71,6 +71,9 @@ main {
 
 .image-section {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-section h2 {
