@@ -41,9 +41,93 @@
             border-left: 4px solid #3498db;
             margin: 15px 0;
         }
+        /* Navigation styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .logo {
+            height: 50px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
+    <!-- codeWithBenji Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5SWFMG0ED6");
+    </script>
+
+    <!-- codeWithBen Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1FMJ0Y2LP1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1FMJ0Y2LP1");
+    </script>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://www.codewithben.ai/pics/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li>
+              <a href="../sessions.html">Sessions Overview</a>
+            </li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../pictures.html">Pictures</a></li>
+            <li><a href="../schedule.html">Schedule</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
     <h1>Building an OpenAI Chatbot: Complete Tutorial</h1>
     
     <div class="section">
@@ -384,5 +468,9 @@ vercel</code></pre>
         
         <p>Happy building!</p>
     </div>
+    
+    <footer>
+      <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
 </body>
 </html> 
