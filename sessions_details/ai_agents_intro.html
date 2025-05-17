@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <title>AI Agents: Theory and Implementation with FastMCP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .note {
+            background-color: #e7f5fe;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fff8e6;
+            border-left: 4px solid #f1c40f;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .session-info {
+            background-color: #f0f7fb;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .session-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 30px 0 20px 0;
+        }
+        .github-link {
+            background-color: #24292e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .github-link:hover {
+            background-color: #0366d6;
+        }
+        .session-divider {
+            margin: 50px 0;
+            border-top: 2px dashed #bdc3c7;
+            position: relative;
+        }
+        .session-divider::after {
+            content: "Next Session";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://cdn.glitch.global/4fa02f55-271c-4f28-8c75-3b11bcd2150a/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <h1>AI Agents: Theory and Implementation with FastMCP</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sessions.html" class="active">Sessions Overview</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../pictures.html">Pictures</a></li>
+            <li><a href="../schedule.html">Schedule</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <article>
+        <div class="toc">
+            <h3>Both Sessions Content</h3>
+            <ul>
+                <li><a href="#session1">Session 1: Introduction to AI Agents: Theory & Architecture</a></li>
+                <li><a href="#session2">Session 2: Building AI Agents: FastMCP with Claude Integration</a></li>
+                <li><a href="#resources">Additional Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- SESSION 1 -->
+        <div id="session1" class="session-header">
+            <h2>Session 1: Introduction to AI Agents: Theory & Architecture</h2>
+            <p>March 16, 2024 | Instructor: Benjamin Coder</p>
+            <a href="https://github.com/BenjiCoder24/ai-agents-fastmcp" class="github-link">
+                <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block; vertical-align:text-bottom;">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="session-info">
+            <p>This session covers the fundamentals of AI agents, including their design principles, architecture patterns, decision-making frameworks, and operating environments.</p>
+        </div>
+
+        <h2 id="introduction">1. Introduction to AI Agents</h2>
+        <p>
+            AI agents are autonomous systems that can perceive their environment, make decisions, and take actions to achieve specific goals. 
+            Unlike traditional software, agents operate with varying degrees of autonomy and can adapt to changing circumstances.
+        </p>
+
+        <h3>Key Characteristics of AI Agents</h3>
+        <ul>
+            <li><strong>Autonomy:</strong> The ability to operate without direct human intervention</li>
+            <li><strong>Perception:</strong> Sensing the environment through inputs</li>
+            <li><strong>Reasoning:</strong> Processing information to make decisions</li>
+            <li><strong>Action:</strong> Changing the environment through outputs</li>
+            <li><strong>Learning:</strong> Improving performance based on experience</li>
+        </ul>
+
+        <h3>Agent Architectures</h3>
+        <p>
+            Different agent architectures organize these capabilities in various ways:
+        </p>
+
+        <table>
+            <tr>
+                <th>Architecture</th>
+                <th>Description</th>
+                <th>Suitable Applications</th>
+            </tr>
+            <tr>
+                <td>Reactive</td>
+                <td>Simple stimulus-response mechanisms without state</td>
+                <td>Time-critical applications, robotics</td>
+            </tr>
+            <tr>
+                <td>Deliberative</td>
+                <td>Planning-based approaches with world models</td>
+                <td>Complex problem-solving, strategy</td>
+            </tr>
+            <tr>
+                <td>Hybrid</td>
+                <td>Combines reactive and deliberative elements</td>
+                <td>Multi-objective tasks, flexible responses</td>
+            </tr>
+            <tr>
+                <td>Learning</td>
+                <td>Adapts behavior based on experience</td>
+                <td>Dynamic environments, personalization</td>
+            </tr>
+            <tr>
+                <td>FastMCP</td>
+                <td>Multi-context planning with rapid cycles</td>
+                <td>Knowledge work, reasoning tasks, LLM integration</td>
+            </tr>
+        </table>
+
+        <p>
+            For more detailed information on agent architectures, see the project documentation at <code>theory/concepts/agent_architectures.md</code>.
+        </p>
+
+        <h3>Agent Environments</h3>
+        <p>
+            Agents operate within specific environments, which can be characterized by several properties:
+        </p>
+        <ul>
+            <li><strong>Observability:</strong> Fully vs. partially observable environments</li>
+            <li><strong>Determinism:</strong> Deterministic vs. stochastic outcomes</li>
+            <li><strong>Sequentiality:</strong> How current actions affect future states</li>
+            <li><strong>Dynamism:</strong> Static vs. changing while the agent deliberates</li>
+            <li><strong>Discreteness:</strong> Discrete vs. continuous state spaces</li>
+        </ul>
+
+        <h3>Agent Decision-Making Frameworks</h3>
+        <p>
+            Agents use various decision-making frameworks to determine their actions:
+        </p>
+        <ul>
+            <li><strong>Rule-based:</strong> Predefined if-then rules</li>
+            <li><strong>Utility-based:</strong> Maximizing an expected utility function</li>
+            <li><strong>Goal-based:</strong> Planning to achieve specified goals</li>
+            <li><strong>Learning-based:</strong> Adapting behavior based on experience</li>
+            <li><strong>Multi-context:</strong> Switching between different reasoning modes</li>
+        </ul>
+
+        <!-- SESSION 2 -->
+        <div class="session-divider"></div>
+
+        <div id="session2" class="session-header">
+            <h2>Session 2: Building AI Agents: FastMCP with Claude Integration</h2>
+            <p>March 30, 2024 | Instructor: Benjamin Coder</p>
+            <a href="https://github.com/BenjiCoder24/ai-agents-fastmcp" class="github-link">
+                <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block; vertical-align:text-bottom;">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="session-info">
+            <p>This session focuses on implementing AI agents using the FastMCP (Fast Multi-Context Planning) architecture with Claude integration, covering practical implementation techniques and hands-on development.</p>
+        </div>
+
+        <h2 id="fastmcp">2. Understanding FastMCP Architecture</h2>
+
+        <p>
+            FastMCP (Fast Multi-Context Planning) is an agent architecture methodology designed to enable AI systems to plan and execute tasks across multiple domains or contexts. It emphasizes:
+        </p>
+
+        <ul>
+            <li>Rapid planning cycles for dynamic environments</li>
+            <li>Context-aware planning across multiple domains</li>
+            <li>Integration with foundation models for reasoning</li>
+            <li>Structured execution of complex plans</li>
+            <li>Built-in reflection for continual improvement</li>
+        </ul>
+
+        <h3>Core Components of FastMCP</h3>
+
+        <div class="note">
+            The FastMCP architecture consists of five main components that work together to create an effective agent system.
+        </div>
+
+        <h4>Context Manager</h4>
+        <p>
+            Manages different domains of knowledge and expertise:
+        </p>
+        <pre><code>
+# Example of creating contexts in FastMCP
+research = Context("research", "Gathering information and analyzing data")
+planning = Context("planning", "Creating step-by-step plans to achieve goals")
+decision = Context("decision", "Making choices based on criteria and consequences")
+        </code></pre>
+
+        <h4>Planning System</h4>
+        <p>
+            Generates structured plans for achieving goals:
+        </p>
+        <pre><code>
+# Creating a plan in FastMCP
+plan = planner.create_plan("Research and summarize advances in AI agent architectures")
+        </code></pre>
+
+        <h4>Reasoning Engine</h4>
+        <p>
+            Provides cognitive capabilities for planning and analysis, often implemented using LLMs like Claude.
+        </p>
+
+        <h4>Execution Framework</h4>
+        <p>
+            Manages the implementation of plans by translating steps into concrete actions.
+        </p>
+
+        <h4>Reflection Module</h4>
+        <p>
+            Evaluates performance and drives improvement through analysis of results.
+        </p>
+
+        <h2 id="claude">3. Claude AI Integration</h2>
+
+        <p>
+            Claude is an AI assistant developed by Anthropic that excels at complex reasoning tasks, making it an ideal foundation for the reasoning component of FastMCP agents.
+        </p>
+
+        <h3>Setting Up Claude API Access</h3>
+
+        <p>
+            To use Claude with your FastMCP implementation:
+        </p>
+
+        <ol>
+            <li>Obtain an API key from <a href="https://www.anthropic.com/">Anthropic</a></li>
+            <li>Set up your environment with the API key</li>
+        </ol>
+
+        <pre><code>
+# Set up environment variable
+export ANTHROPIC_API_KEY=your_claude_api_key_here
+
+# Or add to .env file
+ANTHROPIC_API_KEY=your_claude_api_key_here
+        </code></pre>
+
+        <h3>Basic Claude API Integration</h3>
+
+        <pre><code>
+# Simple example of Claude API usage
+import anthropic
+
+client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+response = client.messages.create(
+    model="claude-3-opus-20240229",
+    system="You are a planning assistant.",
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "Create a plan for writing a research paper"}]
+)
+print(response.content[0].text)
+        </code></pre>
+
+        <div class="warning">
+            Remember to keep your API key secure. Never commit it directly to your code repository.
+        </div>
+
+        <h2 id="implementation">4. Implementation Walkthrough</h2>
+
+        <p>
+            The repository includes a complete implementation of the FastMCP architecture with Claude integration. Let's walk through the key components:
+        </p>
+
+        <h3>Project Structure</h3>
+
+        <pre><code>
+/theory                  # Theoretical concepts and documentation
+  /concepts              # Detailed explanations of key concepts
+  /diagrams              # Visual representations of the architecture
+/implementation          # Core implementation code
+  /fastmcp_core          # FastMCP framework implementation
+  /claude_integration    # Claude AI integration components
+  /demos                 # Example implementations and demonstrations
+/examples                # Simpler standalone examples
+/resources               # Additional resources and references
+        </code></pre>
+
+        <h3>Core FastMCP Implementation</h3>
+
+        <p>
+            The core implementation in <code>implementation/fastmcp_core/fastmcp.py</code> provides the following classes:
+        </p>
+
+        <ul>
+            <li><strong>Context</strong>: Represents a specific domain or area of expertise</li>
+            <li><strong>Plan</strong>: Represents a sequence of actions to achieve a goal</li>
+            <li><strong>FastMCP</strong>: Main class that orchestrates planning and execution</li>
+        </ul>
+
+        <h3>Claude Integration</h3>
+
+        <p>
+            The Claude integration in <code>implementation/claude_integration/claude_reasoning.py</code> provides:
+        </p>
+
+        <ul>
+            <li><strong>ClaudeReasoningEngine</strong>: Implements the reasoning capabilities using Claude API</li>
+            <li>Functions for planning, analysis, and general reasoning</li>
+        </ul>
+
+        <h2 id="basic-agent">5. Building Your First Agent</h2>
+
+        <p>
+            Let's walk through the process of creating a basic agent using the FastMCP framework with Claude integration.
+        </p>
+
+        <h3>Step 1: Set Up Dependencies</h3>
+
+        <pre><code>
+# Install required packages
+pip install -r requirements.txt
+        </code></pre>
+
+        <h3>Step 2: Create a Basic Agent</h3>
+
+        <p>
+            We'll start with the example in <code>examples/basic_agent.py</code>:
+        </p>
+
+        <pre><code>
+import os
+import json
+from dotenv import load_dotenv
+import anthropic
+
+# Load environment variables
+load_dotenv()
+
+class FastMCPAgent:
+    def __init__(self, api_key: str = None):
+        self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
+        if not self.api_key:
+            raise ValueError("No API key provided")
+        
+        self.client = anthropic.Anthropic(api_key=self.api_key)
+        self.model = "claude-3-opus-20240229"
+    
+    # ... [methods for thinking, executing, reflecting]
+    
+    def run(self, task: str):
+        print(f"🤖 Agent received task: {task}")
+        
+        # Planning phase
+        plan = self.think(task)
+        
+        # Execution phase
+        results = self.execute(plan)
+        
+        # Reflection phase
+        reflection = self.reflect(task, plan, results)
+        
+        return {
+            "task": task,
+            "plan": plan,
+            "execution_results": results,
+            "reflection": reflection
+        }
+        </code></pre>
+
+        <h3>Step 3: Running Your Agent</h3>
+
+        <pre><code>
+# Create and run the agent
+agent = FastMCPAgent()
+task = "Research and summarize the three most promising applications of AI agents in healthcare"
+result = agent.run(task)
+        </code></pre>
+
+        <h2 id="demo">6. Running the FastMCP Demo</h2>
+
+        <p>
+            For a more comprehensive example, you can run the demo in <code>implementation/demos/fastmcp_claude_demo.py</code>:
+        </p>
+
+        <pre><code>
+python implementation/demos/fastmcp_claude_demo.py
+        </code></pre>
+
+        <p>
+            This demo shows a complete FastMCP agent that:
+        </p>
+
+        <ol>
+            <li>Initializes the FastMCP framework with multiple contexts</li>
+            <li>Sets up the Claude reasoning engine</li>
+            <li>Creates a plan for a complex goal</li>
+            <li>Executes the plan step by step</li>
+            <li>Analyzes the results to provide insights</li>
+        </ol>
+
+        <div class="note">
+            <p>The demo simulates execution for educational purposes. In a real-world implementation, the execution engine would perform actual actions.</p>
+        </div>
+
+        <h2 id="advanced">7. Advanced Concepts</h2>
+
+        <h3>Multi-Context Planning</h3>
+        <p>
+            FastMCP excels at tasks that span multiple domains. For example, creating a workshop might involve:
+        </p>
+        <ul>
+            <li>Research context for gathering content</li>
+            <li>Planning context for organizing the workshop</li>
+            <li>Education context for designing effective learning experiences</li>
+        </ul>
+
+        <h3>Customizing Contexts</h3>
+        <p>
+            You can create custom contexts to represent specific domains of expertise:
+        </p>
+
+        <pre><code>
+# Creating a custom context
+healthcare_context = Context("healthcare", "Medical knowledge and healthcare applications")
+healthcare_context.add_rule({"name": "patient_privacy", "description": "Ensure patient privacy is protected"})
+healthcare_context.add_heuristic({"name": "evidence_based", "description": "Prioritize evidence-based approaches"})
+planner.register_context(healthcare_context)
+        </code></pre>
+
+        <h3>Extending the Agent</h3>
+        <p>
+            To extend your agent with new capabilities:
+        </p>
+        <ol>
+            <li>Add new methods to the FastMCPAgent class</li>
+            <li>Create new contexts for specialized domains</li>
+            <li>Implement custom execution methods for specific actions</li>
+            <li>Enhance the reflection process for better learning</li>
+        </ol>
+
+        <h2 id="exercises">8. Exercises and Projects</h2>
+
+        <h3>Exercise 1: Create a Research Agent</h3>
+        <p>
+            Extend the basic agent to perform research on a specific topic, summarize findings, and provide recommendations.
+        </p>
+
+        <h3>Exercise 2: Implement a Project Planning Agent</h3>
+        <p>
+            Build an agent that can create detailed project plans, estimate timelines, identify risks, and suggest mitigation strategies.
+        </p>
+
+        <h3>Exercise 3: Develop a Content Creation Agent</h3>
+        <p>
+            Create an agent that can generate various types of content (articles, social media posts, educational materials) based on specific requirements.
+        </p>
+
+        <h3>Challenge Project: Multi-Agent System</h3>
+        <p>
+            Implement a system of multiple FastMCP agents that can collaborate to solve complex problems requiring diverse expertise.
+        </p>
+
+        <div id="resources" class="note">
+            <h4>Additional Resources</h4>
+            <ul>
+                <li><a href="https://docs.anthropic.com/claude/docs">Anthropic Claude Documentation</a></li>
+                <li><a href="https://arxiv.org/abs/2303.17760">Autonomous Agent Papers</a></li>
+                <li><a href="https://github.com/fastmcp/reference">FastMCP Reference Implementation</a></li>
+                <li><a href="https://github.com/BenjiCoder24/ai-agents-fastmcp">GitHub Repository for this Tutorial</a></li>
+            </ul>
+        </div>
+      </article>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 AI Agents & FastMCP Project</p>
+        <p>Licensed under the MIT License - see the LICENSE file for details.</p>
+    </footer>
+</body>
+</html> 
