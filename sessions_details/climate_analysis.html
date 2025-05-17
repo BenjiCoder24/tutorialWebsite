@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>
+      Climate Analysis Project - Programming Tutorials
+    </title>
+  </head>
+
+  <body>
+    <!-- codeWithBenji Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5SWFMG0ED6");
+    </script>
+
+    <!-- codeWithBen Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1FMJ0Y2LP1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1FMJ0Y2LP1");
+    </script>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://www.codewithben.ai/pics/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp?v=1720407690062"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li>
+              <a href="../sessions.html">Sessions Overview</a>
+            </li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../pictures.html">Pictures</a></li>
+            <li><a href="../schedule.html">Schedule</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Climate Analysis Project: Data Visualization with GHCN-M Dataset</h2>
+        <p>
+          This comprehensive project explores climate data analysis using the Global Historical Climatology Network (GHCN) dataset. The project is divided into three sessions, covering data acquisition, processing, analysis, visualization, and interactive dashboard creation.
+        </p>
+
+        <!-- Session 1 -->
+        <div class="session-block">
+          <h3>Session 1: Data Acquisition and Processing</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Introduction to climate data sources and the GHCN-M dataset</li>
+            <li>Setting up the project environment with pandas, numpy, and matplotlib</li>
+            <li>Data cleaning and preprocessing techniques</li>
+            <li>Basic data exploration and statistical analysis</li>
+          </ul>
+          <p><strong>Code Overview:</strong></p>
+          <pre class="code-snippet">
+# Sample code from climate_analysis.py
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load and preprocess GHCN-M data
+def load_temperature_data(filepath):
+    """Load temperature data from CSV file."""
+    df = pd.read_csv(filepath)
+    # Data cleaning and preprocessing
+    df = df.dropna(subset=['temperature'])
+    df['date'] = pd.to_datetime(df['date'])
+    return df
+
+# Calculate global average temperatures
+def calculate_global_avg(df):
+    """Calculate global average temperatures by year."""
+    return df.groupby(df['date'].dt.year)['temperature'].mean()
+          </pre>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="session-block">
+          <h3>Session 2: Data Visualization and Analysis</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Creating advanced visualizations with matplotlib</li>
+            <li>Analyzing global temperature trends over time</li>
+            <li>Regional temperature comparisons</li>
+            <li>Seasonal temperature analysis</li>
+            <li>Identifying extreme temperature events</li>
+          </ul>
+          <p><strong>Code Overview:</strong></p>
+          <pre class="code-snippet">
+# Sample code from visualization.py
+def plot_global_temperature_trend(annual_avg):
+    """Plot global temperature trend over time."""
+    plt.figure(figsize=(12, 6))
+    plt.plot(annual_avg.index, annual_avg.values, 'r-')
+    plt.title('Global Average Temperature Trend (1900-2023)')
+    plt.xlabel('Year')
+    plt.ylabel('Temperature (°C)')
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.savefig('plots/global_temperature_trend.png')
+    
+def plot_regional_heatmap(regional_data):
+    """Create heatmap of regional temperature changes."""
+    pivot = regional_data.pivot(index='region', columns='decade', values='temp_change')
+    plt.figure(figsize=(12, 8))
+    sns.heatmap(pivot, cmap='RdBu_r', center=0, annot=True)
+    plt.title('Regional Temperature Changes by Decade')
+    plt.savefig('plots/regional_heatmap.png')
+          </pre>
+        </div>
+
+        <!-- Session 3 -->
+        <div class="session-block">
+          <h3>Session 3: Interactive Dashboard with FastAPI</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Introduction to web frameworks and FastAPI</li>
+            <li>Creating an interactive dashboard</li>
+            <li>Serving visualizations through a web interface</li>
+            <li>Implementing interactive data filtering</li>
+            <li>Deployment and testing</li>
+          </ul>
+          <p><strong>Code Overview:</strong></p>
+          <pre class="code-snippet">
+# Sample code from app.py
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+import pandas as pd
+
+app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/plots", StaticFiles(directory="plots"), name="plots")
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/")
+async def dashboard(request: Request):
+    """Serve the main dashboard page."""
+    return templates.TemplateResponse(
+        "dashboard.html", 
+        {"request": request, "title": "Climate Analysis Dashboard"}
+    )
+
+@app.get("/api/temperature_data")
+def get_temperature_data():
+    """API endpoint to return temperature data."""
+    df = pd.read_csv("results/annual_global_avg.csv")
+    return df.to_dict(orient="records")
+          </pre>
+        </div>
+
+        <div class="homework-section">
+          <h3>Homework Assignment</h3>
+          <p>
+            <strong>Task:</strong> Enhance the climate analysis project by implementing one of the following features:
+          </p>
+          <ol>
+            <li>Add a new visualization type (e.g., polar plot for seasonal data)</li>
+            <li>Implement additional data filtering options in the interactive dashboard</li>
+            <li>Create a prediction model for future temperature trends</li>
+            <li>Compare the GHCN-M dataset with another climate dataset</li>
+          </ol>
+          <p>
+            <strong>Resources:</strong>
+          </p>
+          <ul>
+            <li><a href="https://github.com/BenjiCoder24/climate_anlysis" target="_blank" rel="noopener">Project GitHub Repository</a></li>
+            <li><a href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly" target="_blank" rel="noopener">GHCN-M Dataset Documentation</a></li>
+            <li><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI Documentation</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </body>
+</html> 
