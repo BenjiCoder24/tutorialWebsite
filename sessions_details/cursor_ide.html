@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Development with Cursor IDE</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #e7f5fe;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        /* Navigation styles - updated to match the image */
+        header {
+            background-color: #4a90e2;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            height: 80px;
+            margin-right: 20px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
+        .session-block {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .code-snippet {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .homework-section {
+            background-color: #f0f7fb;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Analytics tags -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5SWFMG0ED6");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FMJ0Y2LP1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-1FMJ0Y2LP1");
+    </script>
+    
+    <header>
+      <div class="header-content">
+        <img
+          src="../pics/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sessions.html">Sessions Overview</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../pictures.html">Pictures</a></li>
+            <li><a href="../schedule.html">Schedule</a></li>
+            <li><a href="../about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <section>
+        <h2>Interactive Web Development with Cursor IDE</h2>
+        <p>
+          This comprehensive tutorial series will guide you through using Cursor IDE to build interactive web applications. We'll explore Cursor's unique AI-powered features that enhance coding efficiency and help you create modern web applications faster.
+        </p>
+
+        <!-- Session 1 -->
+        <div class="session-block">
+          <h3>Session 1: Introduction to Cursor IDE for Web Development</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Understanding Cursor IDE and its advantages for web development</li>
+            <li>Setting up your development environment</li>
+            <li>Exploring the AI-assisted coding features</li>
+            <li>Understanding the basic workflow and keyboard shortcuts</li>
+          </ul>
+          <p><strong>Key Features of Cursor IDE:</strong></p>
+          <ul>
+            <li><strong>AI Code Completion</strong> - Get intelligent code suggestions as you type</li>
+            <li><strong>Chat with AI</strong> - Ask questions about your code directly in the editor</li>
+            <li><strong>Code Explanation</strong> - Get detailed explanations of complex code</li>
+            <li><strong>Automated Refactoring</strong> - Improve code quality with AI suggestions</li>
+            <li><strong>VS Code Compatibility</strong> - Use your favorite VS Code extensions</li>
+          </ul>
+          <p><strong>Setting Up Your First Project:</strong></p>
+          <pre class="code-snippet">
+# Clone a starter repository
+git clone https://github.com/yourusername/web-starter-project.git
+
+# Open the project in Cursor
+cd web-starter-project
+cursor .
+
+# Install dependencies 
+npm install
+          </pre>
+          <p><strong>Essential Keyboard Shortcuts:</strong></p>
+          <pre class="code-snippet">
+Cmd/Ctrl + Shift + P - Command Palette (access all commands)
+Cmd/Ctrl + / - Toggle AI Chat
+Cmd/Ctrl + I - Get AI explanation for selected code
+Cmd/Ctrl + K - Quick file navigation
+Cmd/Ctrl + Shift + F - Search across all files
+Cmd/Ctrl + J - Toggle terminal
+          </pre>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="session-block">
+          <h3>Session 2: Implementation: Interactive Web Development with Cursor IDE</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Building a responsive web application with HTML, CSS, and JavaScript</li>
+            <li>Using Cursor's AI features to accelerate development</li>
+            <li>Implementing interactive UI components</li>
+            <li>Debugging techniques in Cursor IDE</li>
+          </ul>
+          <p><strong>Project Structure:</strong></p>
+          <pre class="code-snippet">
+web-project/
+  ├── index.html
+  ├── css/
+  │   └── styles.css
+  ├── js/
+  │   ├── app.js
+  │   └── components.js
+  └── assets/
+      └── images/
+          </pre>
+          <p><strong>Creating Responsive Layouts with AI Assistance:</strong></p>
+          <p>Let's build a responsive navigation menu with Cursor's AI suggestions:</p>
+          <pre class="code-snippet">
+/* styles.css */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+/* Use Cursor AI to generate responsive styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+          </pre>
+          <p><strong>Implementing Interactive Features:</strong></p>
+          <pre class="code-snippet">
+// components.js
+class TabPanel {
+  constructor(container) {
+    this.container = document.querySelector(container);
+    this.tabs = this.container.querySelectorAll('.tab');
+    this.panels = this.container.querySelectorAll('.panel');
+    this.bindEvents();
+  }
+  
+  bindEvents() {
+    this.tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Use Cursor AI to help implement tab switching logic
+        this.tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const targetPanel = this.container.querySelector(tab.dataset.target);
+        this.panels.forEach(panel => panel.classList.remove('active'));
+        targetPanel.classList.add('active');
+      });
+    });
+  }
+}
+
+// Initialize components
+document.addEventListener('DOMContentLoaded', () => {
+  const tabPanel = new TabPanel('#feature-tabs');
+});
+          </pre>
+          <p><strong>Using AI to Debug Issues:</strong></p>
+          <p>When you encounter a bug, select the problematic code and press Cmd/Ctrl + I to get an explanation and potential fixes from the AI assistant.</p>
+        </div>
+
+        <!-- Session 3 -->
+        <div class="session-block">
+          <h3>Session 3: Practice and Review: Interactive Web Development with Cursor IDE</h3>
+          <p><strong>Objectives:</strong></p>
+          <ul>
+            <li>Building a complete web project from scratch</li>
+            <li>Implementing advanced UI patterns and animations</li>
+            <li>Optimizing code with AI refactoring suggestions</li>
+            <li>Code review and best practices</li>
+          </ul>
+          <p><strong>Advanced Cursor IDE Features:</strong></p>
+          <ul>
+            <li><strong>AI-Powered Code Reviews</strong> - Get feedback on your code quality</li>
+            <li><strong>Automated Documentation</strong> - Generate documentation comments</li>
+            <li><strong>Performance Suggestions</strong> - Identify and fix performance bottlenecks</li>
+            <li><strong>Accessibility Checks</strong> - Ensure your web app is accessible</li>
+          </ul>
+          <p><strong>Creating Animations with AI Assistance:</strong></p>
+          <pre class="code-snippet">
+/* animations.css */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ask Cursor AI to generate more animations */
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+          </pre>
+          <p><strong>Implementing a Data Dashboard:</strong></p>
+          <pre class="code-snippet">
+// dashboard.js
+class Dashboard {
+  constructor(config) {
+    this.dataUrl = config.dataUrl;
+    this.container = document.querySelector(config.container);
+    this.charts = [];
+    this.fetchData();
+  }
+  
+  async fetchData() {
+    try {
+      const response = await fetch(this.dataUrl);
+      if (!response.ok) throw new Error('Data fetch failed');
+      
+      const data = await response.json();
+      this.renderDashboard(data);
+    } catch (error) {
+      console.error('Dashboard error:', error);
+      this.container.innerHTML = `<div class="error">Failed to load dashboard data</div>`;
+    }
+  }
+  
+  renderDashboard(data) {
+    // Use Cursor AI to help generate visualization code
+    const metrics = `
+      <div class="metrics-container">
+        <div class="metric">
+          <h3>Total Users</h3>
+          <p class="value">${data.totalUsers.toLocaleString()}</p>
+          <p class="change ${data.userGrowth > 0 ? 'positive' : 'negative'}">
+            ${Math.abs(data.userGrowth)}% ${data.userGrowth > 0 ? '↑' : '↓'}
+          </p>
+        </div>
+        <!-- Additional metrics would be generated by AI -->
+      </div>
+    `;
+    
+    this.container.innerHTML = metrics;
+    this.initCharts(data);
+  }
+  
+  initCharts(data) {
+    // Chart implementation with Chart.js or similar library
+    // This would be assisted by Cursor AI
+  }
+}
+
+// Initialize dashboard
+new Dashboard({
+  container: '#dashboard',
+  dataUrl: '/api/dashboard-data'
+});
+          </pre>
+          <p><strong>Performance Optimization:</strong></p>
+          <p>Use Cursor AI to identify performance issues in your code:</p>
+          <ol>
+            <li>Select a section of code you want to optimize</li>
+            <li>Press Cmd/Ctrl + / to open the AI chat</li>
+            <li>Ask: "How can I optimize this code for better performance?"</li>
+            <li>Implement the AI's suggestions</li>
+          </ol>
+        </div>
+
+        <div class="homework-section">
+          <h3>Homework Assignment</h3>
+          <p>
+            <strong>Task:</strong> Build an interactive product showcase website using Cursor IDE
+          </p>
+          <ol>
+            <li>Create a responsive product grid with filtering options</li>
+            <li>Implement smooth animations and transitions</li>
+            <li>Add a product detail modal with dynamic content</li>
+            <li>Use localStorage to save user preferences</li>
+            <li>Optimize the site for performance and accessibility</li>
+          </ol>
+          <p>
+            <strong>Resources:</strong>
+          </p>
+          <ul>
+            <li><a href="https://cursor.sh/docs" target="_blank" rel="noopener">Cursor IDE Documentation</a></li>
+            <li><a href="https://github.com/cursor-ai/examples" target="_blank" rel="noopener">Example Projects</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          </ul>
+          <p><strong>Submission:</strong> Push your completed project to GitHub and share the repository link in the Discord channel.</p>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </body>
+</html> 
