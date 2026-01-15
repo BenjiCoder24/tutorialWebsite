@@ -173,7 +173,7 @@ tr:nth-child(even) {
 }
 
 .hero {
-    background: url('path/to/your/image.jpg') no-repeat center center/cover; /* Background image */
+    background: url("pics/code_with_benji_website.jpg") no-repeat center center/cover; /* Background image */
     color: white;
     padding: 100px 20px;
     text-align: center;
