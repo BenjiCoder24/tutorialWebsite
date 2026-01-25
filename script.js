@@ -1,6 +1,11 @@
 // CodeWithBenji.AI - Modern JavaScript Interactions
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Set dynamic copyright year
+  const yearElements = document.querySelectorAll('#year, .footer-year');
+  const currentYear = new Date().getFullYear();
+  yearElements.forEach(el => el.textContent = currentYear);
+
   // Smooth page fade-in
   document.body.style.opacity = 0;
   document.body.style.transition = 'opacity 0.5s ease-out';
