@@ -4,170 +4,553 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Browse all programming tutorial sessions covering HTML, JavaScript, Python, OOP, REST APIs, AI chatbots, and more. Each session includes GitHub resources." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="/pics/favicon.ico" />
-    <title>
-      Session Overview - Programming Tutorials: From Foundations to AI
-    </title>
+    <link rel="icon" type="image/png" href="/pics/favicon.png" />
+    <title>Sessions - Programming Tutorials: From Foundations to AI</title>
   </head>
 
   <body>
-    <!-- codeWithBenji Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"
-    ></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-5SWFMG0ED6");
-    </script>
-
-    <!-- codeWithBen Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-1FMJ0Y2LP1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "G-1FMJ0Y2LP1");
     </script>
+
     <header>
       <div class="header-content">
         <img
-          src="/pics/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp"
-          alt="Logo"
+          src="/pics/logo.png"
+          alt="CodeWithBenji.AI Logo"
           class="logo"
         />
-        <!-- Add your logo here -->
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="sessions.html" class="active">Sessions Overview</a>
-            </li>
+            <li><a href="sessions.html" class="active">Sessions</a></li>
             <li><a href="resources.html">Resources</a></li>
-            <li><a href="pictures.html">Pictures</a></li>
+            <li><a href="pictures.html">Gallery</a></li>
             <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <main>
-      <section>
-        <h2>Explore Our Sessions</h2>
-        <p>Select a session below to view detailed plans and resources.</p>
-        <ul>
-          <!-- New sessions added at the top with updated GitHub links -->
-          <li>
-            <a href="sessions_details/climate_analysis.html">Climate Analysis Project: Data Visualization with GHCN-M Dataset</a>
-            <a href="https://github.com/BenjiCoder24/climate_anlysis" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/gpt_features.html">Advanced GPT Features: Projects, Groups and Tasks</a>
-            <a href="https://github.com/BenjiCoder24/gpt-features-guide" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/ai_agents_intro.html">Building AI Agents: FastMCP with Claude Integration</a>
-            <a href="https://github.com/BenjiCoder24/ai-agents-fastmcp" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/ai_agents_intro.html">Introduction to AI Agents: Theory and Architecture</a>
-            <a href="https://github.com/BenjiCoder24/ai-agents-fastmcp" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/openai_chat.html">Review and Deployment: Building an OpenAI Chatbot</a>
-            <a href="https://github.com/BenjiCoder24/openai-chatbot" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/openai_chat.html">Implementation: Building an OpenAI Chatbot</a>
-            <a href="https://github.com/BenjiCoder24/openai-chatbot" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/openai_chat.html">Theory and Setup: Building an OpenAI Chatbot</a>
-            <a href="https://github.com/BenjiCoder24/openai-chatbot" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/cursor_ide.html">Practice and Review: Interactive Web Development with Cursor IDE</a>
-            <a href="https://github.com/BenjiCoder24/cursor-ide-tutorials" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/cursor_ide.html">Implementation: Interactive Web Development with Cursor IDE</a>
-            <a href="https://github.com/BenjiCoder24/cursor-ide-tutorials" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/cursor_ide.html">Introduction to Cursor IDE for Web Development</a>
-            <a href="https://github.com/BenjiCoder24/cursor-ide-tutorials" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          
-          <!-- Existing sessions -->
-          <li>
-            <a href="sessions_details/recipi_detail.html">Using GPT to generate and search recipies based on user input</a>
-            <a href="https://github.com/BenjiCoder24/recipe" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/sign_languange.html">Using GPT picture processing to read sign language</a>
-            <a href="https://github.com/BenjiCoder24/signLanguage" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/js_html_chat_bot.html">JavaScript and HTML Chat Bot Tutorial with Flask Backend</a>
-            <a href="https://github.com/BenjiCoder24/js_html_chat" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/chatbot.html">Introduction to webservers and RestApi Development</a>
-            <a href="https://github.com/BenjiCoder24/restapi.git" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/oop_moving_objects.html">OOP Moving Objects Tutorial</a>
-            <a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/pythonoop.html">Introduction to Python OOP</a>
-            <a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/python_control_structures.html">Python Programming: Control Structures Tutorial</a>
-            <a href="https://github.com/BenjiCoder24/conditional_statements" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/functions_and_exceptions.html">Python Functions and Exception Handling</a>
-            <a href="https://github.com/BenjiCoder24/functions_and_more" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/python_intro.html">Python Tutorial for Beginners</a>
-            <a href="https://colab.research.google.com/drive/14Tv0fUqATV922a3Hb6lcLcXj7IxKL97I?usp=sharing" target="_blank" rel="noopener" class="github-link">[Colab]</a>
-          </li>
-          <li>
-            <a href="sessions_details/js_ball_bounce.html">JavaScript: Ball Bounce Game</a>
-            <a href="https://github.com/BenjiCoder24/bounce_ball" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/introjs.html">Introduction to JavaScript</a>
-            <a href="https://github.com/BenjiCoder24/IntroJs" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/js_html_intro.html">Introduction to JavaScript in HTML</a>
-            <a href="https://github.com/BenjiCoder24/IntroJs" target="_blank" rel="noopener" class="github-link">[GitHub]</a>
-          </li>
-          <li>
-            <a href="sessions_details/htmlintro.html">Introduction to HTML</a>
-            <a href="https://colab.research.google.com/github/BenjiCoder24/html_intro/blob/main/html_tutorial_ipython.ipynb" target="_blank" rel="noopener" class="github-link">[Colab]</a>
-          </li>
-        </ul>
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1>Tutorial Sessions</h1>
+        <p>Explore our comprehensive programming tutorials. From web basics to AI applications, each session includes hands-on projects and GitHub resources.</p>
+      </section>
+
+      <!-- Filter Tags -->
+      <section class="content">
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">All Sessions</button>
+          <button class="filter-tag" data-filter="ai">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            AI & ML
+          </button>
+          <button class="filter-tag" data-filter="python">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Python
+          </button>
+          <button class="filter-tag" data-filter="javascript">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+            JavaScript
+          </button>
+          <button class="filter-tag" data-filter="html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            HTML/CSS
+          </button>
+        </div>
+
+        <!-- Sessions Grid -->
+        <div class="sessions-grid">
+          <!-- AI & ML Sessions -->
+          <div class="session-card" data-category="ai">
+            <div class="session-badge">New</div>
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Climate Analysis Project</h3>
+            <p>Data Visualization with GHCN-M Dataset - Learn to analyze and visualize climate data using Python.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Data Science</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/climate_analysis.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/climate_anlysis" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="ai">
+            <div class="session-badge">New</div>
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Advanced GPT Features</h3>
+            <p>Projects, Groups and Tasks - Master advanced GPT capabilities for complex applications.</p>
+            <div class="session-meta">
+              <span class="tag">AI</span>
+              <span class="tag">GPT</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/gpt_features.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/gpt-features-guide" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="ai">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Building AI Agents</h3>
+            <p>FastMCP with Claude Integration - Learn to build intelligent AI agents using modern frameworks.</p>
+            <div class="session-meta">
+              <span class="tag">AI</span>
+              <span class="tag">Agents</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/ai_agents_intro.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/ai-agents-fastmcp" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="ai">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3>OpenAI Chatbot Series</h3>
+            <p>Build a complete chatbot with OpenAI - Theory, Implementation, and Deployment.</p>
+            <div class="session-meta">
+              <span class="tag">AI</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">3 Parts</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/openai_chat.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/openai-chatbot" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="ai">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Sign Language Recognition</h3>
+            <p>Using GPT picture processing to read sign language - Computer vision meets AI.</p>
+            <div class="session-meta">
+              <span class="tag">AI</span>
+              <span class="tag">Vision</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/sign_languange.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/signLanguage" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="ai">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                <path d="M7 2v20"></path>
+                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+              </svg>
+            </div>
+            <h3>GPT Recipe Generator</h3>
+            <p>Generate and search recipes based on user input using GPT - Practical AI application.</p>
+            <div class="session-meta">
+              <span class="tag">AI</span>
+              <span class="tag">GPT</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/recipi_detail.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/recipe" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- JavaScript Sessions -->
+          <div class="session-card" data-category="javascript">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Cursor IDE Series</h3>
+            <p>Interactive Web Development with Cursor IDE - Introduction, Implementation, and Practice.</p>
+            <div class="session-meta">
+              <span class="tag">JavaScript</span>
+              <span class="tag">IDE</span>
+              <span class="tag">3 Parts</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/cursor_ide.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/cursor-ide-tutorials" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="javascript">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3>JS/HTML Chat Bot</h3>
+            <p>Build a chatbot with Flask backend - Full-stack JavaScript application.</p>
+            <div class="session-meta">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Flask</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/js_html_chat_bot.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/js_html_chat" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="javascript">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3>Ball Bounce Game</h3>
+            <p>Create an interactive ball bounce game with JavaScript - Learn game development basics.</p>
+            <div class="session-meta">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Games</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/js_ball_bounce.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/bounce_ball" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="javascript html">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Introduction to JavaScript</h3>
+            <p>Learn JavaScript fundamentals - Variables, functions, and DOM manipulation.</p>
+            <div class="session-meta">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Beginner</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/introjs.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/IntroJs" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="javascript html">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>JavaScript in HTML</h3>
+            <p>Learn how to integrate JavaScript with HTML documents effectively.</p>
+            <div class="session-meta">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/js_html_intro.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/IntroJs" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Python Sessions -->
+          <div class="session-card" data-category="python">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3>REST API Development</h3>
+            <p>Introduction to webservers and REST API development with Python.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">APIs</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/chatbot.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/restapi.git" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="python">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3>OOP Moving Objects</h3>
+            <p>Learn Object-Oriented Programming with animated moving objects tutorial.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">OOP</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/oop_moving_objects.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="python">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Python OOP Fundamentals</h3>
+            <p>Introduction to Object-Oriented Programming concepts in Python.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">OOP</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/pythonoop.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/objectOrientProgramming" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="python">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Control Structures</h3>
+            <p>Python control structures - Conditionals, loops, and flow control.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Basics</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/python_control_structures.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/conditional_statements" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="python">
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Functions & Exceptions</h3>
+            <p>Python functions and exception handling for robust code.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Functions</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/functions_and_exceptions.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://github.com/BenjiCoder24/functions_and_more" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="session-card" data-category="python">
+            <div class="session-badge">Beginner</div>
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Python for Beginners</h3>
+            <p>Start your Python journey - Variables, data types, and basic operations.</p>
+            <div class="session-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Beginner</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/python_intro.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://colab.research.google.com/drive/14Tv0fUqATV922a3Hb6lcLcXj7IxKL97I?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                Colab
+              </a>
+            </div>
+          </div>
+
+          <!-- HTML/CSS Sessions -->
+          <div class="session-card" data-category="html">
+            <div class="session-badge">Beginner</div>
+            <div class="session-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Introduction to HTML</h3>
+            <p>Start building websites - Learn HTML structure, elements, and semantic markup.</p>
+            <div class="session-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">Beginner</span>
+            </div>
+            <div class="session-links">
+              <a href="sessions_details/htmlintro.html" class="btn btn-primary btn-small">View Session</a>
+              <a href="https://colab.research.google.com/github/BenjiCoder24/html_intro/blob/main/html_tutorial_ipython.ipynb" target="_blank" rel="noopener" class="btn btn-secondary btn-small">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                Colab
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="content" style="text-align: center;">
+        <h2>Ready to Start Learning?</h2>
+        <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">
+          All our tutorials are completely free and include hands-on projects.
+          Pick a session above or check out our resources for additional learning materials.
+        </p>
+        <a href="resources.html" class="btn btn-primary">View Resources</a>
       </section>
     </main>
+
     <footer>
-      <p>Copyright © 2024. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="sessions.html">Sessions</a>
+          <a href="resources.html">Resources</a>
+          <a href="about.html">About</a>
+          <a href="https://github.com/BenjiCoder24" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p>Copyright 2024 CodeWithBenji.AI. All rights reserved.</p>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
