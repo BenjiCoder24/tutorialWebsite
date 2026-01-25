@@ -4,586 +4,736 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Complete lesson schedule for programming tutorials covering HTML, JavaScript, Python, OOP, REST APIs, AI chatbots, and climate analysis projects." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="/pics/favicon.ico" />
-    <title>Lesson Schedule - Programming Tutorials</title>
+    <link rel="icon" type="image/png" href="/pics/favicon.png" />
+    <title>Schedule - CodeWithBenji.AI</title>
   </head>
 
   <body>
-    <!-- codeWithBenji Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"
-    ></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SWFMG0ED6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-5SWFMG0ED6");
-    </script>
-
-    <!-- codeWithBen Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-1FMJ0Y2LP1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "G-1FMJ0Y2LP1");
     </script>
 
     <header>
       <div class="header-content">
         <img
-          src="/pics/DALL%C2%B7E%202024-07-07%2023.00.36%20-%20Create%20a%20sleek%20and%20simple%20logo%20that%20symbolizes%20'Programming%20Tutorials_%20From%20Foundations%20to%20AI'.%20The%20logo%20should%20be%20clean%20and%20modern%2C%20with%20a%20youthful%20v.webp"
-          alt="Logo"
+          src="/pics/logo.png"
+          alt="CodeWithBenji.AI Logo"
           class="logo"
         />
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="sessions.html">Sessions Overview</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
             <li><a href="resources.html">Resources</a></li>
-            <li><a href="pictures.html">Pictures</a></li>
+            <li><a href="pictures.html">Gallery</a></li>
             <li><a href="schedule.html" class="active">Schedule</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section>
-        <h2>Lesson Schedule</h2>
-        <p>
-          This schedule outlines the structure of our lessons, starting from the
-          most recent.
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1>Lesson Schedule</h1>
+        <p>Our complete lesson timeline, from the most recent sessions to the beginning of our journey.</p>
+      </section>
+
+      <!-- Current/Featured Sessions -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">
+          <span class="ai-badge" style="display: inline-flex;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Latest Sessions
+          </span>
+        </h2>
+        <div class="schedule-grid">
+          <div class="schedule-card featured">
+            <div class="schedule-date">May 11</div>
+            <div class="schedule-content">
+              <h3>Interactive Dashboard with FastAPI</h3>
+              <span class="session-tag">Climate Project</span>
+              <p>Implementing an interactive web dashboard using FastAPI to visualize climate data analysis results and allow users to filter and explore temperature trends.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card featured">
+            <div class="schedule-date">April 27</div>
+            <div class="schedule-content">
+              <h3>Data Visualization and Analysis</h3>
+              <span class="session-tag">Climate Project</span>
+              <p>Creating advanced visualizations to analyze global temperature trends, regional comparisons, seasonal patterns, and extreme weather events.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card featured">
+            <div class="schedule-date">April 20</div>
+            <div class="schedule-content">
+              <h3>Data Acquisition and Processing</h3>
+              <span class="session-tag">Climate Project</span>
+              <p>Introduction to climate data sources, downloading and preprocessing the GHCN-M dataset, and performing initial statistical analysis.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">April 13</div>
+            <div class="schedule-content">
+              <h3>Advanced GPT Features</h3>
+              <span class="session-tag">AI</span>
+              <p>Exploring latest GPT website features including shared projects, group collaboration, web search integration, and task management.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Agents Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">AI Agents & Chatbots</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">March 30</div>
+            <div class="schedule-content">
+              <h3>Building AI Agents: FastMCP with Claude</h3>
+              <span class="session-tag">AI Agents</span>
+              <p>Implementing a FastMCP-based agent utilizing Claude AI capabilities, focusing on autonomous task execution.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 16</div>
+            <div class="schedule-content">
+              <h3>Introduction to AI Agents</h3>
+              <span class="session-tag">AI Agents</span>
+              <p>Understanding AI agents fundamentals, design principles, decision-making frameworks, and operational environments.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 2</div>
+            <div class="schedule-content">
+              <h3>Review & Deployment: OpenAI Chatbot</h3>
+              <span class="session-tag">AI</span>
+              <p>Final testing, debugging, and deploying the OpenAI-powered chatbot with optimization techniques.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 16</div>
+            <div class="schedule-content">
+              <h3>Implementation: OpenAI Chatbot</h3>
+              <span class="session-tag">AI</span>
+              <p>Coding the chatbot interface, implementing API integration, handling context and memory management.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 2</div>
+            <div class="schedule-content">
+              <h3>Theory & Setup: OpenAI Chatbot</h3>
+              <span class="session-tag">AI</span>
+              <p>Introduction to OpenAI APIs, prompt engineering principles, and chatbot architecture planning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cursor IDE Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Modern Development Tools</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">January 19</div>
+            <div class="schedule-content">
+              <h3>Practice & Review: Cursor IDE</h3>
+              <span class="session-tag">Tools</span>
+              <p>Finalizing interactive web applications, troubleshooting, and advanced Cursor IDE features.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">January 5</div>
+            <div class="schedule-content">
+              <h3>Implementation: Interactive Web with Cursor</h3>
+              <span class="session-tag">Tools</span>
+              <p>Building interactive web elements using HTML, CSS and JavaScript with AI assistance.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">December 22</div>
+            <div class="schedule-content">
+              <h3>Introduction to Cursor IDE</h3>
+              <span class="session-tag">Tools</span>
+              <p>Getting started with Cursor IDE, exploring AI-powered features for web development.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recipe App Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Streamlit Recipe App Project</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">December 13</div>
+            <div class="schedule-content">
+              <h3>Final Review: Recipe App</h3>
+              <span class="session-tag">Python</span>
+              <p>Final walkthrough, testing, and polishing the app before deployment.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 29</div>
+            <div class="schedule-content">
+              <h3>Show Examples: Recipe App</h3>
+              <span class="session-tag">Python</span>
+              <p>Demo of searching for recipes using API calls and Streamlit components.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 15</div>
+            <div class="schedule-content">
+              <h3>Implementation: Recipe App</h3>
+              <span class="session-tag">Python</span>
+              <p>Building the main UI, connecting to Spoonacular API with OOP classes.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 1</div>
+            <div class="schedule-content">
+              <h3>Theory & Setup: Recipe App</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to Streamlit, OOP design overview, and environment setup.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sign Language App Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Sign Language Interpreter App</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">September 27</div>
+            <div class="schedule-content">
+              <h3>Practice & Review: Sign Language App</h3>
+              <span class="session-tag">AI</span>
+              <p>Final implementation session, debugging, and end-to-end testing.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">September 13</div>
+            <div class="schedule-content">
+              <h3>Show Examples: Sign Language App</h3>
+              <span class="session-tag">AI</span>
+              <p>Demonstration of image capture, gesture recognition, and GPT sentence construction.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">August 30</div>
+            <div class="schedule-content">
+              <h3>Theory: Sign Language App</h3>
+              <span class="session-tag">AI</span>
+              <p>Project architecture, real-time image capture, and GPT integration concepts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- School Events Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">School Events - Philippines</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">August 15</div>
+            <div class="schedule-content">
+              <h3>AI Presentation at Artacho School</h3>
+              <span class="session-tag">Event</span>
+              <p>What is Computer Science and AI: and how does it affect you?</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">Aug 1-22</div>
+            <div class="schedule-content">
+              <h3>Advanced Math Class</h3>
+              <span class="session-tag">Event</span>
+              <p>Advanced Math class for the junior year at Artacho School, Philippines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Development & APIs Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Web Development & APIs</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">June 28</div>
+            <div class="schedule-content">
+              <h3>Review: Chat Bot with Flask</h3>
+              <span class="session-tag">Web</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">June 21</div>
+            <div class="schedule-content">
+              <h3>Practice: Chat Bot with Flask</h3>
+              <span class="session-tag">Web</span>
+              <p>Practical session implementing chat bot using JavaScript, HTML, and Flask.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">June 14</div>
+            <div class="schedule-content">
+              <h3>Examples: Chat Bot with Flask</h3>
+              <span class="session-tag">Web</span>
+              <p>Detailed explanation of code examples for creating a chat bot.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">June 7</div>
+            <div class="schedule-content">
+              <h3>Theory: Chat Bot with Flask</h3>
+              <span class="session-tag">Web</span>
+              <p>Introduction to chat bots, Flask, and JavaScript/HTML integration.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">May 31</div>
+            <div class="schedule-content">
+              <h3>Review: Webservers and REST API</h3>
+              <span class="session-tag">Web</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">May 24</div>
+            <div class="schedule-content">
+              <h3>Practice: Webservers and REST API</h3>
+              <span class="session-tag">Web</span>
+              <p>Practical session implementing webservers and REST API development.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">May 17</div>
+            <div class="schedule-content">
+              <h3>Examples: Webservers and REST API</h3>
+              <span class="session-tag">Web</span>
+              <p>Detailed explanation of code examples for webservers and REST API.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">May 10</div>
+            <div class="schedule-content">
+              <h3>Theory: Webservers and REST API</h3>
+              <span class="session-tag">Web</span>
+              <p>Introduction to webservers and REST API concepts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OOP Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Object-Oriented Programming</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">May 3</div>
+            <div class="schedule-content">
+              <h3>Review: OOP Moving Objects</h3>
+              <span class="session-tag">Python</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">April 26</div>
+            <div class="schedule-content">
+              <h3>Practice: OOP Moving Objects</h3>
+              <span class="session-tag">Python</span>
+              <p>Practical session creating moving objects using OOP concepts.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">April 19</div>
+            <div class="schedule-content">
+              <h3>Examples: OOP Moving Objects</h3>
+              <span class="session-tag">Python</span>
+              <p>Detailed explanation of code examples for OOP moving objects.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">April 12</div>
+            <div class="schedule-content">
+              <h3>Theory: OOP Moving Objects</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to OOP concepts and creating moving objects.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">April 5</div>
+            <div class="schedule-content">
+              <h3>Review: Introduction to Python OOP</h3>
+              <span class="session-tag">Python</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 29</div>
+            <div class="schedule-content">
+              <h3>Practice: Introduction to Python OOP</h3>
+              <span class="session-tag">Python</span>
+              <p>Practical session implementing OOP concepts in Python.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 22</div>
+            <div class="schedule-content">
+              <h3>Examples: Introduction to Python OOP</h3>
+              <span class="session-tag">Python</span>
+              <p>Detailed explanation of code examples for Python OOP.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 15</div>
+            <div class="schedule-content">
+              <h3>Theory: Introduction to Python OOP</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to OOP concepts in Python.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Python Fundamentals Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Python Fundamentals</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">March 8</div>
+            <div class="schedule-content">
+              <h3>Review: Python Control Structures</h3>
+              <span class="session-tag">Python</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">March 1</div>
+            <div class="schedule-content">
+              <h3>Practice: Python Control Structures</h3>
+              <span class="session-tag">Python</span>
+              <p>Practical session implementing control structures in Python.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 22</div>
+            <div class="schedule-content">
+              <h3>Examples: Python Control Structures</h3>
+              <span class="session-tag">Python</span>
+              <p>Detailed explanation of code examples for control structures.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 15</div>
+            <div class="schedule-content">
+              <h3>Theory: Python Control Structures</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to control structures in Python.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 8</div>
+            <div class="schedule-content">
+              <h3>Review: Python Functions & Exceptions</h3>
+              <span class="session-tag">Python</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">February 1</div>
+            <div class="schedule-content">
+              <h3>Practice: Python Functions & Exceptions</h3>
+              <span class="session-tag">Python</span>
+              <p>Practical session implementing functions and exception handling.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">January 25</div>
+            <div class="schedule-content">
+              <h3>Examples: Python Functions & Exceptions</h3>
+              <span class="session-tag">Python</span>
+              <p>Detailed explanation of code examples for functions and exceptions.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">January 18</div>
+            <div class="schedule-content">
+              <h3>Theory: Python Functions & Exceptions</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to functions and exception handling in Python.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">January 11</div>
+            <div class="schedule-content">
+              <h3>Review: Python for Beginners</h3>
+              <span class="session-tag">Python</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">January 4</div>
+            <div class="schedule-content">
+              <h3>Practice: Python for Beginners</h3>
+              <span class="session-tag">Python</span>
+              <p>Practical session for beginner Python programmers.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">December 28</div>
+            <div class="schedule-content">
+              <h3>Examples: Python for Beginners</h3>
+              <span class="session-tag">Python</span>
+              <p>Detailed explanation of code examples for beginners.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">December 21</div>
+            <div class="schedule-content">
+              <h3>Theory: Python for Beginners</h3>
+              <span class="session-tag">Python</span>
+              <p>Introduction to Python programming for beginners.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JavaScript Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">JavaScript Programming</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">December 14</div>
+            <div class="schedule-content">
+              <h3>Review: JavaScript Ball Bounce Game</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">December 7</div>
+            <div class="schedule-content">
+              <h3>Practice: JavaScript Ball Bounce Game</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Practical session creating a ball bounce game.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 30</div>
+            <div class="schedule-content">
+              <h3>Examples: JavaScript Ball Bounce Game</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Detailed explanation of code examples for ball bounce game.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 23</div>
+            <div class="schedule-content">
+              <h3>Theory: JavaScript Ball Bounce Game</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Introduction to creating a ball bounce game using JavaScript.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 16</div>
+            <div class="schedule-content">
+              <h3>Review: Introduction to JavaScript</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 9</div>
+            <div class="schedule-content">
+              <h3>Practice: Introduction to JavaScript</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Practical session for beginners to JavaScript programming.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">November 2</div>
+            <div class="schedule-content">
+              <h3>Examples: Introduction to JavaScript</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Detailed explanation of code examples for JavaScript beginners.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">October 26</div>
+            <div class="schedule-content">
+              <h3>Theory: Introduction to JavaScript</h3>
+              <span class="session-tag">JavaScript</span>
+              <p>Introduction to JavaScript programming for beginners.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HTML Fundamentals Section -->
+      <section class="content">
+        <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">HTML Fundamentals</h2>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-date">October 19</div>
+            <div class="schedule-content">
+              <h3>Review: JavaScript in HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">October 12</div>
+            <div class="schedule-content">
+              <h3>Practice: JavaScript in HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Practical session for integrating JavaScript with HTML.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">October 5</div>
+            <div class="schedule-content">
+              <h3>Examples: JavaScript in HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Detailed explanation of code examples for JavaScript in HTML.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">September 28</div>
+            <div class="schedule-content">
+              <h3>Theory: JavaScript in HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Introduction to integrating JavaScript with HTML.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">September 21</div>
+            <div class="schedule-content">
+              <h3>Review: Introduction to HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Addressing homework issues, final Q&A, and lesson recap.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">September 14</div>
+            <div class="schedule-content">
+              <h3>Practice: Introduction to HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Practical session for beginners to HTML.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">September 7</div>
+            <div class="schedule-content">
+              <h3>Examples: Introduction to HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Detailed explanation of code examples for HTML beginners.</p>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-date">August 31</div>
+            <div class="schedule-content">
+              <h3>Theory: Introduction to HTML</h3>
+              <span class="session-tag">HTML</span>
+              <p>Introduction to HTML programming for beginners.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="content" style="text-align: center;">
+        <h2>Want to Join Our Sessions?</h2>
+        <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">
+          All our tutorials are free and designed for learners at all skill levels.
+          Check out our sessions page to start learning today!
         </p>
-        <table>
-          <tr>
-            <th>Date</th>
-            <th>Lesson</th>
-            <th>Description</th>
-          </tr>
-          <!-- CLIMATE ANALYSIS PROJECT SESSIONS AT THE TOP -->
-          <tr>
-            <td>May 11</td>
-            <td>Interactive Dashboard with FastAPI: Climate Analysis Project</td>
-            <td>
-              Implementing an interactive web dashboard using FastAPI to visualize climate data analysis results 
-              and allow users to filter and explore temperature trends and patterns.
-            </td>
-          </tr>
-          <tr>
-            <td>April 27</td>
-            <td>Data Visualization and Analysis: Climate Analysis Project</td>
-            <td>
-              Creating advanced visualizations to analyze global temperature trends, regional comparisons, 
-              seasonal patterns, and extreme weather events using the GHCN-M dataset.
-            </td>
-          </tr>
-          <tr>
-            <td>April 20</td>
-            <td>Data Acquisition and Processing: Climate Analysis Project</td>
-            <td>
-              Introduction to climate data sources, downloading and preprocessing the GHCN-M dataset, 
-              and performing initial statistical analysis on global temperature records.
-            </td>
-          </tr>
-          <tr>
-            <td>April 13</td>
-            <td>Advanced GPT Features: Projects, Groups & Tasks</td>
-            <td>
-              Exploring latest GPT website features including shared projects, group collaboration, 
-              web search integration, and task management capabilities.
-            </td>
-          </tr>
-          <!-- NEW AI AGENTS SESSIONS -->
-          <tr>
-            <td>March 30</td>
-            <td>Building AI Agents: FastMCP with Claude Integration</td>
-            <td>
-              Implementing a FastMCP-based agent utilizing Claude AI capabilities, focusing on 
-              autonomous task execution and complex reasoning capabilities.
-            </td>
-          </tr>
-          <tr>
-            <td>March 16</td>
-            <td>Introduction to AI Agents: Theory & Architecture</td>
-            <td>
-              Understanding the fundamentals of AI agents, their design principles, decision-making frameworks, 
-              and how they operate in different environments.
-            </td>
-          </tr>
-          <!-- NEW OPENAI CHATBOT SESSIONS -->
-          <tr>
-            <td>March 2</td>
-            <td>Review & Deployment: Building an OpenAI Chatbot</td>
-            <td>
-              Final testing, debugging, and deploying the OpenAI-powered chatbot. Review of best practices 
-              and optimization techniques.
-            </td>
-          </tr>
-          <tr>
-            <td>February 16</td>
-            <td>Implementation: Building an OpenAI Chatbot</td>
-            <td>
-              Coding the chatbot interface, implementing API integration with OpenAI, handling context and memory,
-              and managing conversation flow.
-            </td>
-          </tr>
-          <tr>
-            <td>February 2</td>
-            <td>Theory & Setup: Building an OpenAI Chatbot</td>
-            <td>
-              Introduction to OpenAI APIs, prompt engineering principles, environment setup, 
-              and planning the chatbot architecture using Cursor IDE.
-            </td>
-          </tr>
-          <!-- NEW CURSOR IDE SESSIONS -->
-          <tr>
-            <td>January 19</td>
-            <td>Practice & Review: Interactive Web Development with Cursor IDE</td>
-            <td>
-              Finalizing and testing interactive web applications, troubleshooting common issues, 
-              and reviewing advanced Cursor IDE features for web development.
-            </td>
-          </tr>
-          <tr>
-            <td>January 5</td>
-            <td>Implementation: Interactive Web Development with Cursor IDE</td>
-            <td>
-              Building interactive web elements using HTML, CSS and JavaScript with Cursor IDE's AI assistance
-              for code generation, debugging, and optimization.
-            </td>
-          </tr>
-          <tr>
-            <td>December 22</td>
-            <td>Introduction to Cursor IDE for Web Development</td>
-            <td>
-              Getting started with Cursor IDE, exploring its AI-powered features for web development,
-              setting up projects, and leveraging code completion capabilities.
-            </td>
-          </tr>
-          <!-- EXISTING SCHEDULE ENTRIES BELOW -->
-          <tr>
-            <td>December 13</td>
-            <td>Final Review: Recipe App on Streamlit</td>
-            <td>
-              Final walkthrough, testing, and polishing the app before
-              deployment. Q&amp;A session and ideas for future improvements.
-            </td>
-          </tr>
-          <tr>
-            <td>December 13</td>
-            <td>Final Review: Recipe App on Streamlit</td>
-            <td>
-              Final walkthrough, testing, and polishing the app before
-              deployment. Q&amp;A session and ideas for future improvements.
-            </td>
-          </tr>
-          <tr>
-            <td>November 29</td>
-            <td>Show Examples: Recipe App on Streamlit</td>
-            <td>
-              Demo of searching for recipes using API calls, displaying images,
-              and finalizing the UI with Streamlit components.
-            </td>
-          </tr>
-          <tr>
-            <td>November 15</td>
-            <td>Implementation: Recipe App on Streamlit</td>
-            <td>
-              Building the main UI, connecting to Spoonacular, structuring data
-              in OOP classes (Recipe, Ingredient), and generating dynamic pages.
-            </td>
-          </tr>
-          <tr>
-            <td>November 1</td>
-            <td>Theory &amp; Setup: Recipe App on Streamlit</td>
-            <td>
-              Introduction to Streamlit, overview of the OOP design, and
-              environment setup for the Spoonacular API.
-            </td>
-          </tr>
-
-          <!-- NEW SIGN LANGUAGE INTERPRETER APP SESSIONS AT THE TOP -->
-          <tr>
-            <td>September 27</td>
-            <td>Practice &amp; Review: Sign Language Interpreter App</td>
-            <td>
-              Final implementation session, debugging, and Q&amp;A. We'll test
-              the app end-to-end, ensure GPT integration is working, and polish
-              any final details.
-            </td>
-          </tr>
-          <tr>
-            <td>September 13</td>
-            <td>Show Examples: Sign Language Interpreter App</td>
-            <td>
-              Demonstration of capturing images from a webcam, recognizing sign
-              language gestures, and constructing coherent sentences using
-              OpenAI's GPT API.
-            </td>
-          </tr>
-          <tr>
-            <td>August 30</td>
-            <td>Theory: Sign Language Interpreter App</td>
-            <td>
-              Introduction to project architecture, real-time image capture,
-              sign language recognition, and GPT integration concepts.
-            </td>
-          </tr>
-
-          <!-- EXISTING SCHEDULE ENTRIES BELOW -->
-          <tr>
-            <td>August 15</td>
-            <td>AI Presentation in the Artacho school, Philippines.</td>
-            <td>What is Compute Science and AI: and how does it affect you?</td>
-          </tr>
-          <tr>
-            <td>August 1-22</td>
-            <td>
-              Advanced Math class for the junior year, Artacho school,
-              Philippines
-            </td>
-            <td>
-              Advanced Math class for the junior year, Artacho school,
-              Philippines
-            </td>
-          </tr>
-          <tr>
-            <td>June 28</td>
-            <td>
-              Review and Fix Homework: JavaScript and HTML Chat Bot Tutorial
-              with Flask Backend
-            </td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>June 21</td>
-            <td>
-              Practice: JavaScript and HTML Chat Bot Tutorial with Flask Backend
-            </td>
-            <td>
-              Practical session to implement a chat bot using JavaScript, HTML,
-              and Flask.
-            </td>
-          </tr>
-          <tr>
-            <td>June 14</td>
-            <td>
-              Show Examples: JavaScript and HTML Chat Bot Tutorial with Flask
-              Backend
-            </td>
-            <td>
-              Detailed explanation of code examples for creating a chat bot.
-            </td>
-          </tr>
-          <tr>
-            <td>June 7</td>
-            <td>
-              Theory: JavaScript and HTML Chat Bot Tutorial with Flask Backend
-            </td>
-            <td>
-              Introduction to chat bots, Flask, and integrating JavaScript with
-              HTML.
-            </td>
-          </tr>
-          <tr>
-            <td>May 31</td>
-            <td>
-              Review and Fix Homework: Introduction to webservers and RestApi
-              Development
-            </td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>May 24</td>
-            <td>
-              Practice: Introduction to webservers and RestApi Development
-            </td>
-            <td>
-              Practical session to implement webservers and RestAPI development.
-            </td>
-          </tr>
-          <tr>
-            <td>May 17</td>
-            <td>
-              Show Examples: Introduction to webservers and RestApi Development
-            </td>
-            <td>
-              Detailed explanation of code examples for webservers and RestAPI
-              development.
-            </td>
-          </tr>
-          <tr>
-            <td>May 10</td>
-            <td>Theory: Introduction to webservers and RestApi Development</td>
-            <td>Introduction to webservers and RestAPI concepts.</td>
-          </tr>
-          <tr>
-            <td>May 3</td>
-            <td>Review and Fix Homework: OOP Moving Objects Tutorial</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>April 26</td>
-            <td>Practice: OOP Moving Objects Tutorial</td>
-            <td>
-              Practical session to create moving objects using OOP concepts.
-            </td>
-          </tr>
-          <tr>
-            <td>April 19</td>
-            <td>Show Examples: OOP Moving Objects Tutorial</td>
-            <td>
-              Detailed explanation of code examples for OOP moving objects.
-            </td>
-          </tr>
-          <tr>
-            <td>April 12</td>
-            <td>Theory: OOP Moving Objects Tutorial</td>
-            <td>Introduction to OOP concepts and creating moving objects.</td>
-          </tr>
-          <tr>
-            <td>April 5</td>
-            <td>Review and Fix Homework: Introduction to Python OOP</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>March 29</td>
-            <td>Practice: Introduction to Python OOP</td>
-            <td>Practical session to implement OOP concepts in Python.</td>
-          </tr>
-          <tr>
-            <td>March 22</td>
-            <td>Show Examples: Introduction to Python OOP</td>
-            <td>Detailed explanation of code examples for Python OOP.</td>
-          </tr>
-          <tr>
-            <td>March 15</td>
-            <td>Theory: Introduction to Python OOP</td>
-            <td>Introduction to OOP concepts in Python.</td>
-          </tr>
-          <tr>
-            <td>March 8</td>
-            <td>
-              Review and Fix Homework: Python Programming: Control Structures
-              Tutorial
-            </td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>March 1</td>
-            <td>Practice: Python Programming: Control Structures Tutorial</td>
-            <td>
-              Practical session to implement control structures in Python.
-            </td>
-          </tr>
-          <tr>
-            <td>February 22</td>
-            <td>
-              Show Examples: Python Programming: Control Structures Tutorial
-            </td>
-            <td>
-              Detailed explanation of code examples for control structures in
-              Python.
-            </td>
-          </tr>
-          <tr>
-            <td>February 15</td>
-            <td>Theory: Python Programming: Control Structures Tutorial</td>
-            <td>Introduction to control structures in Python.</td>
-          </tr>
-          <tr>
-            <td>February 8</td>
-            <td>
-              Review and Fix Homework: Python Functions and Exception Handling
-            </td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>February 1</td>
-            <td>Practice: Python Functions and Exception Handling</td>
-            <td>
-              Practical session to implement functions and exception handling in
-              Python.
-            </td>
-          </tr>
-          <tr>
-            <td>January 25</td>
-            <td>Show Examples: Python Functions and Exception Handling</td>
-            <td>
-              Detailed explanation of code examples for functions and exception
-              handling in Python.
-            </td>
-          </tr>
-          <tr>
-            <td>January 18</td>
-            <td>Theory: Python Functions and Exception Handling</td>
-            <td>Introduction to functions and exception handling in Python.</td>
-          </tr>
-          <tr>
-            <td>January 11</td>
-            <td>Review and Fix Homework: Python Tutorial for Beginners</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>January 4</td>
-            <td>Practice: Python Tutorial for Beginners</td>
-            <td>Practical session for beginner Python programmers.</td>
-          </tr>
-          <tr>
-            <td>December 28</td>
-            <td>Show Examples: Python Tutorial for Beginners</td>
-            <td>Detailed explanation of code examples for beginners.</td>
-          </tr>
-          <tr>
-            <td>December 21</td>
-            <td>Theory: Python Tutorial for Beginners</td>
-            <td>Introduction to Python programming for beginners.</td>
-          </tr>
-          <tr>
-            <td>December 14</td>
-            <td>Review and Fix Homework: JavaScript Ball Bounce Game</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>December 7</td>
-            <td>Practice: JavaScript Ball Bounce Game</td>
-            <td>
-              Practical session to create a ball bounce game using JavaScript.
-            </td>
-          </tr>
-          <tr>
-            <td>November 30</td>
-            <td>Show Examples: JavaScript Ball Bounce Game</td>
-            <td>
-              Detailed explanation of code examples for a ball bounce game in
-              JavaScript.
-            </td>
-          </tr>
-          <tr>
-            <td>November 23</td>
-            <td>Theory: JavaScript Ball Bounce Game</td>
-            <td>
-              Introduction to creating a ball bounce game using JavaScript.
-            </td>
-          </tr>
-          <tr>
-            <td>November 16</td>
-            <td>Review and Fix Homework: Introduction to JavaScript</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>November 9</td>
-            <td>Practice: Introduction to JavaScript</td>
-            <td>Practical session for beginners to JavaScript programming.</td>
-          </tr>
-          <tr>
-            <td>November 2</td>
-            <td>Show Examples: Introduction to JavaScript</td>
-            <td>
-              Detailed explanation of code examples for beginners in JavaScript.
-            </td>
-          </tr>
-          <tr>
-            <td>October 26</td>
-            <td>Theory: Introduction to JavaScript</td>
-            <td>Introduction to JavaScript programming for beginners.</td>
-          </tr>
-          <tr>
-            <td>October 19</td>
-            <td>Review and Fix Homework: Introduction to JavaScript in HTML</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>October 12</td>
-            <td>Practice: Introduction to JavaScript in HTML</td>
-            <td>Practical session for integrating JavaScript with HTML.</td>
-          </tr>
-          <tr>
-            <td>October 5</td>
-            <td>Show Examples: Introduction to JavaScript in HTML</td>
-            <td>
-              Detailed explanation of code examples for JavaScript in HTML.
-            </td>
-          </tr>
-          <tr>
-            <td>September 28</td>
-            <td>Theory: Introduction to JavaScript in HTML</td>
-            <td>Introduction to integrating JavaScript with HTML.</td>
-          </tr>
-          <tr>
-            <td>September 21</td>
-            <td>Review and Fix Homework: Introduction to HTML</td>
-            <td>
-              Addressing homework issues, final Q&amp;A, and recap of the
-              lesson.
-            </td>
-          </tr>
-          <tr>
-            <td>September 14</td>
-            <td>Practice: Introduction to HTML</td>
-            <td>Practical session for beginners to HTML.</td>
-          </tr>
-          <tr>
-            <td>September 7</td>
-            <td>Show Examples: Introduction to HTML</td>
-            <td>
-              Detailed explanation of code examples for beginners in HTML.
-            </td>
-          </tr>
-          <tr>
-            <td>August 31</td>
-            <td>Theory: Introduction to HTML</td>
-            <td>Introduction to HTML programming for beginners.</td>
-          </tr>
-        </table>
+        <a href="sessions.html" class="btn btn-primary">Browse Sessions</a>
       </section>
     </main>
 
     <footer>
-      <p>Copyright © 2024. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="sessions.html">Sessions</a>
+          <a href="resources.html">Resources</a>
+          <a href="about.html">About</a>
+          <a href="https://github.com/BenjiCoder24" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p>Copyright 2024 CodeWithBenji.AI. All rights reserved.</p>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
